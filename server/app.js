@@ -29,8 +29,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-const whitelist = ['http://localhost:3000','https://freelapp.herokuapp.com/']
-const corsOptions = {
+// const whitelist = ['http://localhost:3000','https://freelapp.herokuapp.com/']
+/* const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
@@ -39,9 +39,13 @@ const corsOptions = {
     }
   },
   credentials: true
-}
+} */
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:3000','https://freelapp.herokuapp.com/'],
+}));
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // Enable authentication using session + passport
 app.use(session({
