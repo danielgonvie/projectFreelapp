@@ -1,0 +1,33 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+html, body{
+  max-width: 1366px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: 'Raleway', sans-serif;
+}
+
+h5{
+  margin:0;
+  padding:0;
+}
+
+.edit-button{
+  position: absolute;
+  top: 5;
+  left: 5;
+  height: 50px;
+  width: 80px;
+  color: white;
+  background-color: grey;
+}

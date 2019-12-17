@@ -1,0 +1,142 @@
+
+.artist-page-main {
+  width: 59vw;
+
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.no-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artist-page-profile-img {
+  height: 20vh;
+  border-radius: 50%;
+  border: 4px solid #d3d3d3;
+}
+
+.image {
+  padding: 20px;
+}
+.artist-page-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.just-name {
+  color: #d3d3d3;
+  padding: 0;
+  margin: 0;
+}
+.just-alias {
+  color: #d3d3d3;
+  padding: 0;
+  margin: 0;
+}
+.artist-page-subcategory {
+  padding: 0px 0px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  font-weight: bolder;
+  color: #d3d3d3;
+  font-size: 17px;
+}
+.artist-page-info {
+  margin-left: 20px;
+  width: 300px;
+  padding-top: 20px;
+  max-height: 200px;
+  color: #1e2531;
+}
+.artist-page-names {
+  font-size: 30px;
+  color: #d3d3d3;
+  height: 10vh;
+  padding: 10;
+}
+.artist-page-names {
+  height: 50px;
+}
+.artist-page-social {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  color: #d3d3d3;
+
+}
+.artist-page-location {
+  font-size: 16px;
+  padding-bottom: 5px;;
+  color: #d3d3d3;
+}
+.artist-page-availability {
+  padding: 0px 0;
+  font-size: 16px;
+  color: #d3d3d3;
+}
+.social-links {
+  padding: 0;
+  margin: 0;
+}
+
+.social-logo {
+  height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.logo-img {
+  height: 20px;
+}
+.social-compact {
+  display: flex;
+  margin: 10px 10px;
+  padding: 2px;
+  justify-content: flex-start;
+
+
+}
+.contact-compact {
+  display: flex;
+  margin: 10px 10px;
+  height: 20px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(66, 66, 66);
+  border-radius: 10px;
+}
+
+.artist-phone{
+  font-style: 'Fira Sans', sans-serif;
+}
+
+.artist-email{
+  font-size: 13px;
+}
+
+.artist-page-contact{
+  display:flex;
+  flex-direction: row;
+}
+.doble-name {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.doble-name > h3 {
+  margin: 0;
+
+  padding: 0;
+  color: #d3d3d3;
+}
+
+.alias-artist-page {
+  color: grey;
+}
