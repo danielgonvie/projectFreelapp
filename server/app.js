@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-const whitelist = ['http://localhost:3000','https://freelapp.herokuapp.com/']
+const whitelist = ['http://localhost:3000','https://freelapp.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
