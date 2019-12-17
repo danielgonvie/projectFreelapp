@@ -12,7 +12,6 @@ import Home from './components/Home/Home';
 import ArtistView from './components/ArtistView/ArtistView';
 import Index from './components/Index/Index';
 import Navbar from './components/Navbar/Navbar';
-import ArtistProfile from './components/ArtistProfile/ArtistProfile';
 import EditCalendar from './components/EditCalendar/EditCalendar';
 
 class App extends React.Component {
@@ -67,8 +66,6 @@ class App extends React.Component {
             <Route exact path="/" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><Home {...match} user={user} /></React.Fragment>}/>            
             <Route exact path="/artists/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><ArtistView {...match} user={user} /></React.Fragment>}/>
             <Route exact path="/calendar/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><EditCalendar {...match} user={user} /></React.Fragment>}/>
-            <Route exact path="/artists/profile" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><ArtistProfile {...match} user={user} /></React.Fragment>}/>
-
           </Switch> }
           
           {!user && <Switch>
