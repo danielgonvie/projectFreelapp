@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Artist.css";
 import { Link } from "react-router-dom";
 
+
 export default class Artist extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +31,7 @@ export default class Artist extends Component {
     if (this.props.artist.social.instagram) {
       instagram = (
         <div className="social-compact">
-          <img className="social-logo" src="/img/instagram.png"></img>{" "}
+          <img className="social-logo" alt="Something missing" src="/img/instagram.png"></img>{" "}
           <h3 className="social-links">
             {" "}
             {this.props.artist.social.instagram}
@@ -42,7 +43,7 @@ export default class Artist extends Component {
     if (this.props.artist.social.github) {
       github = (
         <div className="social-compact">
-          <img className="social-logo" src="/img/github.png"></img>{" "}
+          <img className="social-logo" alt="Something missing" src="/img/github.png"></img>{" "}
           <h3 className="social-links">{this.props.artist.social.github}</h3>
         </div>
       );
@@ -51,7 +52,7 @@ export default class Artist extends Component {
     if (this.props.artist.social.soundcloud) {
       soundcloud = (
         <div className="social-compact">
-          <img className="social-logo" src="/img/soundcloud.png"></img>{" "}
+          <img className="social-logo" alt="Something missing" src="/img/soundcloud.png"></img>{" "}
           <h3 className="social-links">
             {this.props.artist.social.soundcloud}
           </h3>
@@ -62,7 +63,7 @@ export default class Artist extends Component {
     if (this.props.artist.social.other) {
       other = (
         <div className="social-compact">
-          <img className="social-logo" src="/img/web.png"></img>{" "}
+          <img className="social-logo" alt="Something missing" src="/img/web.png"></img>{" "}
           <h3 className="social-links">{this.props.artist.social.other}</h3>{" "}
         </div>
       );
@@ -83,7 +84,7 @@ export default class Artist extends Component {
     if (this.props.artist.contactPhone) {
       phone = (
         <div className="contact-compact">
-          <img className="social-logo" src="/img/smartphone.png"></img>{" "}
+          <img className="social-logo" alt="Something missing" src="/img/smartphone.png"></img>{" "}
           <h3 className="artist-phone"> {this.props.artist.contactPhone}</h3>
         </div>
       );
@@ -92,7 +93,7 @@ export default class Artist extends Component {
     if (this.props.artist.contactEmail) {
       email = (
         <div className="contact-compact">
-          <img className="social-logo" src="/img/gmail.png"></img>{" "}
+          <img className="social-logo" alt="Something missing" src="/img/gmail.png"></img>{" "}
           <h3 className="artist-email"> {this.props.artist.contactEmail}</h3>
         </div>
       );
@@ -123,7 +124,7 @@ export default class Artist extends Component {
 
     let edit = <React.Fragment></React.Fragment>
     if (this.props.user.id === this.props.id){
-        edit = <button className="edit-button">Edit</button>
+      edit = <Link className="link-to-edit-artist" to={"/artists/edit/" + this.props.user.id}>Edit</Link> 
     }
 
     return (
@@ -133,6 +134,7 @@ export default class Artist extends Component {
           <img
             className="artist-page-profile-img"
             src={this.props.artist.picture}
+            alt="Something failed"
           />
         </div>
 

@@ -22,12 +22,3 @@ h5{
   padding:0;
 }
 
-.edit-button{
-  position: absolute;
-  top: 5;
-  left: 5;
-  height: 50px;
-  width: 80px;
-  color: white;
-  background-color: grey;
-}

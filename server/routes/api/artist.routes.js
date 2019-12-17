@@ -27,12 +27,31 @@ router.get('/:id', (req, res, next) => {
 })
 
 
-router.post('/:calendarId', (req, res, next) => {
+/* router.post('/:calendarId', (req, res, next) => {
   const { calendarId } = req.params;
   const {eventId} = req.body;
   Calendar.findByIdAndUpdate(calendarId,{ $pull: {events: {id: eventId}}}, {new: true})
   .then(calendar => {
     res.status(200).json(calendar)
+  })
+  .catch(error => console.log(error))
+}) */
+
+router.get('/calendar/:id', (req, res, next) => {
+  const { id } = req.params;
+  console.log(id)
+  Calendar.findById(id)
+  .then(calendar => {
+    res.status(200).json(calendar)
+  })
+  .catch(error => console.log(error))
+})
+
+router.get('/portfolio/:id', (req, res, next) => {
+  const { id } = req.params;
+  Portfolio.findById(id)
+  .then(portfolio => {
+    res.status(200).json(portfolio)
   })
   .catch(error => console.log(error))
 })

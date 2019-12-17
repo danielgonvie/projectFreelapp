@@ -91,7 +91,7 @@ class ArtistList extends React.Component {
 
 
   render() {
-    const { loggedInUser } = this.props;
+    // const { loggedInUser } = this.props;
     const { artists } = this.state;
     return (
       <div>

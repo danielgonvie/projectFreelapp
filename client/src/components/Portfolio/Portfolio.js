@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ImageGallery from "react-image-gallery";
 import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
 import "./Portfolio.css";
 
 export default class extends Component {
@@ -69,11 +70,11 @@ export default class extends Component {
     ) {
       videos = (
         <React.Fragment>
-          <div class="artist-videos">
+          <div className="artist-videos">
             {this.state.videos.map(video => {
               return (
                 <React.Fragment>
-                  <iframe className="youtube-frame" src={video}></iframe>
+                  <iframe title="artist-video" className="youtube-frame" src={video}></iframe>
                   {/* <button >Delete</button> */}
                 </React.Fragment>
               );
@@ -101,7 +102,7 @@ export default class extends Component {
     ) {
       songs = (
         <React.Fragment>
-          <div class="artist-songs">
+          <div className="artist-songs">
             {this.state.songs.map(song => {
               return (
                 <React.Fragment>
@@ -117,11 +118,13 @@ export default class extends Component {
     } else {
       songs = <React.Fragment></React.Fragment>;
     }
+    
 
 
     let edit = <React.Fragment></React.Fragment>
     if (this.props.user.id === this.props.id){
-        edit = <button className="edit-button">Edit</button>
+      console.log(this.props.user)
+      edit = <Link className="link-to-edit-portfolio" to={"/portfolio/" + this.props.user.portfolio}>Edit</Link> 
     }
 
 
@@ -132,7 +135,7 @@ export default class extends Component {
         <div className="portfolio-separator"></div>
         {imageDesc}
         {images}
-
+        
         {videoDesc}
         {videos}
 

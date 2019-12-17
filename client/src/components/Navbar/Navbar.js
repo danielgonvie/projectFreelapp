@@ -53,6 +53,7 @@ export default class Navbar extends Component {
               <img
                 className="navbar-profile-img"
                 src={this.props.user.picture}
+                alt="Bro... :("
               ></img>
          
             {profile}

@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 
 import './Prueba.css'
-import Basic from './Calendar/Basic';
+
 import AuthService from '../../services/AuthService';
 import { Link } from 'react-router-dom';
-import PruebaCalendar from './PruebaCalendar/PruebaCalendar';
+
 
 
 
@@ -40,7 +40,7 @@ export default class Prueba extends Component {
               </Link>
                 
                 <div>
-               <Basic></Basic>
+         
                
 
               

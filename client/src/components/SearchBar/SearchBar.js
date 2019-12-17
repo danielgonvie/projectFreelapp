@@ -7,14 +7,11 @@ export default class
             super(props);
             
           }
-        
-
-
 
     render() {
         return (
             <div className="search-bar">
-            🔎<input onChange={this.props.search} onKeyDown={this.props.onkey} type="text"></input>
+            <span role="img">🔎</span><input onChange={this.props.search} onKeyDown={this.props.onkey} type="text"></input>
 
 
             </div>

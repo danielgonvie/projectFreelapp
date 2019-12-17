@@ -22,11 +22,18 @@ class ArtistService {
     .catch(error => console.error(error))
   }
 
-  deleteEvent = (calendarId,eventId) => {
+/*   deleteEvent = (calendarId,eventId) => {
     return this.instance.post(`/${calendarId}`, {eventId})
     .then(res => Promise.resolve(res.data))
     .catch(error => console.error(error))
+  } */
+
+  fetchCalendar = (id) => {
+    return this.instance.get(`/calendar/${id}`)
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
   }
+
 }
 
 export default ArtistService;
