@@ -8,6 +8,8 @@ class ArtistService {
     })
   }
 
+
+
   fetchArtists = () => {
     return this.instance.get('/')
     .then(res => Promise.resolve(res.data))

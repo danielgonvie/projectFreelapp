@@ -24,7 +24,7 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "dotenv -e .env.prod react-scripts start",
     "build-dev": "dotenv -e .env.dev react-scripts build",
     "build-prod": "dotenv -e .env.prod react-scripts build",
     "build": "react-scripts build",

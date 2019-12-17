@@ -27,6 +27,8 @@ class AuthService {
   }
 
   loggedInUser = () => {
+    console.log(process.env.REACT_APP_API_URL)
+
     return this.instance.get('/loggedin')
     .then(res => Promise.resolve(res.data))
     .catch(error => console.error(error))
