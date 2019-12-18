@@ -101,11 +101,11 @@ export default class EditPortfolio extends Component {
     }
   }
 
-  deleteImg = (id) => {
+  deleteImg = (id ) => {
     
     this.artistService.deleteImg(this.props.match.params.id, id)
     
-    /* this.state.gallery.images.splice(i, 1); */
+    //  this.state.gallery.images.filter(e.target.src); 
     
   
     this.setState({
