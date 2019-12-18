@@ -34,12 +34,23 @@ class ArtistService {
     .catch(error => console.error(error))
   }
 
+  updatePortfolio = (id, description, gallery) => {
+    return this.instance.post(`/edit/portfolio/${id}`, {description, gallery})
+    .then(res=> Promise.resolve(res.data))
+    .catch(error => console.error(error))
+  }
+
   updateEvents = (events, id) => {
-    console.log(id)
     return this.instance.post(`/edit/calendar/${id}`, events)
     .then(res => Promise.resolve(res.data))
     .catch(error => console.error(error))
 
+  }
+
+  deleteImg = (id, i) =>{
+    return this.instance.post(`/delete/img/${id}`, i)
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
   }
  
 

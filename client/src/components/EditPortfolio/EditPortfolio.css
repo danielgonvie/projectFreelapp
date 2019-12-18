@@ -1,0 +1,20 @@
+.edit-img-only{
+  
+  height: 150px;
+  position: relative;
+}
+
+.edit-img-cart{
+  display: flex;
+  flex-direction:column;
+}
+
+.image-edit-gallery{
+  display:flex;
+}
+
+.delete-image{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
