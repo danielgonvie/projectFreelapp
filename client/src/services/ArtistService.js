@@ -22,17 +22,26 @@ class ArtistService {
     .catch(error => console.error(error))
   }
 
-/*   deleteEvent = (calendarId,eventId) => {
-    return this.instance.post(`/${calendarId}`, {eventId})
-    .then(res => Promise.resolve(res.data))
-    .catch(error => console.error(error))
-  } */
-
   fetchCalendar = (id) => {
     return this.instance.get(`/calendar/${id}`)
     .then(res => Promise.resolve(res.data))
     .catch(error => console.error(error))
   }
+
+  fetchPortfolio = (id) => {
+    return this.instance.get(`/portfolio/${id}`)
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
+  }
+
+  updateEvents = (events, id) => {
+    console.log(id)
+    return this.instance.post(`/edit/calendar/${id}`, events)
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
+
+  }
+ 
 
 }
 

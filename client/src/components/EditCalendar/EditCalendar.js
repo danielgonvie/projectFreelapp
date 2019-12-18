@@ -23,13 +23,14 @@ export default class EditCalendar extends Component {
  
     return (
       <React.Fragment> 
-        <GoodCalendar calendar={this.state.calendar}></GoodCalendar>
+        <GoodCalendar calendar={this.state.calendar} ></GoodCalendar>
       </React.Fragment>
     );
   };
 
   componentDidMount() {
-    this.updateCalendar();
+    if (this.props.user.calendar === this.props.match.params.id){this.updateCalendar();}
+    
   }
 
   updateCalendar = () => {

@@ -26,12 +26,15 @@ body {
   max-width: 1000px;
   margin: 50px 0;
 }
+
 .portfolio-container {
   display: flex;
+  position:relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .artist-images {
   width: 1000px;
   border: 3px solid #d3d3d3;

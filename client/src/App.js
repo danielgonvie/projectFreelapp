@@ -13,6 +13,7 @@ import ArtistView from './components/ArtistView/ArtistView';
 import Index from './components/Index/Index';
 import Navbar from './components/Navbar/Navbar';
 import EditCalendar from './components/EditCalendar/EditCalendar';
+import EditPortfolio from './components/EditPortfolio/EditPortfolio';
 
 class App extends React.Component {
   constructor(props) {
@@ -66,6 +67,7 @@ class App extends React.Component {
             <Route exact path="/" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><Home {...match} user={user} /></React.Fragment>}/>            
             <Route exact path="/artists/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><ArtistView {...match} user={user} /></React.Fragment>}/>
             <Route exact path="/calendar/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><EditCalendar {...match} user={user} /></React.Fragment>}/>
+            <Route exact path="/portfolio/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><EditPortfolio {...match} user={user} /></React.Fragment>}/>
           </Switch> }
           
           {!user && <Switch>

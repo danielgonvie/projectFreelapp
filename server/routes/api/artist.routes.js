@@ -39,9 +39,20 @@ router.get('/:id', (req, res, next) => {
 
 router.get('/calendar/:id', (req, res, next) => {
   const { id } = req.params;
-  console.log(id)
   Calendar.findById(id)
   .then(calendar => {
+    res.status(200).json(calendar)
+  })
+  .catch(error => console.log(error))
+})
+
+router.post('/edit/calendar/:id', (req, res, next) => {
+  const { id } = req.params;
+  const  events  = req.body;
+  
+  Calendar.findByIdAndUpdate(id, {events: events})
+  .then(calendar => {
+    console.log("Se ha actualizado correctamente")
     res.status(200).json(calendar)
   })
   .catch(error => console.log(error))
@@ -50,10 +61,13 @@ router.get('/calendar/:id', (req, res, next) => {
 router.get('/portfolio/:id', (req, res, next) => {
   const { id } = req.params;
   Portfolio.findById(id)
+  .lean()
   .then(portfolio => {
     res.status(200).json(portfolio)
   })
   .catch(error => console.log(error))
 })
+
+
 
 module.exports = router;
