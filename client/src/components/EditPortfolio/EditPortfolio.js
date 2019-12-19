@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ArtistService from "../../services/ArtistService";
 import "./EditPortfolio.css";
+import ReactPlayer from "react-player";
 
 export default class EditPortfolio extends Component {
   constructor(props) {
@@ -17,15 +18,20 @@ export default class EditPortfolio extends Component {
         videoDesc: null,
         songDesc: null
       },
-
-      description: null
+      newImg: null,
+      newVideo: null,
+      newSong: null,
+      description: null,
     };
   }
 
   handleChange = e => {
     const { name, value } = e.target;
     console.log(e.target.value);
-    this.setState({ ...this.state, gallery: { ...this.state.gallery, [name]: value } });
+    this.setState({
+      ...this.state,
+      gallery: { ...this.state.gallery, [name]: value }
+    });
   };
 
   handleChangeDesc = e => {
@@ -33,6 +39,21 @@ export default class EditPortfolio extends Component {
     console.log(e.target.value);
     this.setState({ ...this.state, [name]: value });
   };
+
+  handleChangeNewImg = e => {
+    const { value } = e.target;
+    this.setState({ ...this.state, newImg: value });
+  };
+
+  handleChangeNewVideo = e => {
+    const { value } = e.target;
+    this.setState({ ...this.state, newVideo: value });
+  };
+  handleChangeNewSong = e => {
+    const { value } = e.target;
+    this.setState({ ...this.state, newSong: value });
+  };
+
 
   displayPortfolio = () => {
     const { portfolio } = this.state;
@@ -59,12 +80,34 @@ export default class EditPortfolio extends Component {
               onChange={this.handleChange}
             ></input>
           </div>
-          
+
           <div className="edit-img-cart">
             <label>Añadir y eliminar imágenes: </label>
             <div className="image-edit-gallery">
-            {this.state.gallery.images.map((image, i) => <div className="edit-img-only"><img className="edit-img-only" key={i} src={image.original} onClick={() => this.deleteImg(image._id)} /> <button className="delete-image"  >Delete</button></div> )}
-          </div>
+              {this.state.gallery.images.map((image, i) => (
+                <div className="edit-img-only">
+                  <img
+                    className="edit-img-only"
+                    key={i}
+                    src={image.original}
+                    onClick={() => this.deleteImg(image._id)}
+                    alt="Imagen errónea. Click para borrar."
+                  />{" "}
+                  
+                </div>
+              ))}
+
+
+              
+              <input
+              type="text"
+              name="newImg"
+              value={this.state.newImg}
+              onChange={e => this.handleChangeNewImg(e)}
+            ></input>
+            <button className="add-image" onClick={(e) => this.addImg(e)}>➕</button>
+
+            </div>
           </div>
 
           <div className="edit-video-description">
@@ -77,6 +120,35 @@ export default class EditPortfolio extends Component {
             ></input>
           </div>
 
+          <div className="edit-video-cart">
+            <label>Añadir y eliminar vídeos: </label>
+            <div className="video-edit-gallery">
+              {this.state.gallery.videos.map((video, i) => (
+                <div className="edit-video-only">
+                  <iframe
+                    className="edit-video-only"
+                    key={i}
+                    src={video}
+                   
+                    alt="Video erróneo. Click para borrar."
+                  />
+                  <button  className="delete-video" onClick={() => this.deleteVideo(video)}>Delete</button>
+                </div>
+              ))}
+
+
+              
+              <input
+              type="text"
+              name="newVideo"
+              value={this.state.newVideo}
+              onChange={e => this.handleChangeNewVideo(e)}
+            ></input>
+            <button className="add-video" onClick={(e) => this.addVideo(e)}>➕</button>
+
+            </div>
+          </div>
+
           <div className="edit-song-description">
             <label>Editar la descripcion de las canciones: </label>
             <input
@@ -85,15 +157,42 @@ export default class EditPortfolio extends Component {
               name="songDesc"
               onChange={this.handleChange}
             ></input>
-            <input type="submit" value="Guardar"/>
+            <input type="submit" value="Guardar" />
           </div>
+
+          <div className="edit-song-cart">
+            <label>Añadir y eliminar canciones: </label>
+            <div className="song-edit-gallery">
+              {this.state.gallery.songs.map((song, i) => (
+                <div className="edit-song-only">
+                <ReactPlayer className="edit-song-only" url={song} />
+                  <button  className="delete-song" onClick={() => this.deleteSong(song)}>Delete</button>
+                </div>
+              ))}
+
+
+              
+              <input
+              type="text"
+              name="newSong"
+              value={this.state.newSong}
+              onChange={e => this.handleChangeNewSong(e)}
+            ></input>
+            <button className="add-song" onClick={(e) => this.addSong(e)}>➕</button>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
         </div>
       </React.Fragment>
     );
   };
-
-
-
 
   componentDidMount() {
     if (this.props.user.portfolio === this.props.match.params.id) {
@@ -101,18 +200,54 @@ export default class EditPortfolio extends Component {
     }
   }
 
-  deleteImg = (id ) => {
+  addImg = e => {
+    e.preventDefault()
+    this.setState({...this.state, images: this.state.gallery.images.push( {original: this.state.newImg})})
+  }
+
+  deleteImg = id => {
     
-    this.artistService.deleteImg(this.props.match.params.id, id)
+      const newState = this.state;
+      const index = newState.gallery.images.findIndex(a => a._id === id);
+      if (index === -1) return;
+      newState.gallery.images.splice(index, 1);
+      this.setState(newState); // This will update the state and trigger a rerender of the components
     
-    //  this.state.gallery.images.filter(e.target.src); 
+  };
+
+  addVideo = e => {
+    e.preventDefault()
+    this.state.gallery.videos.push( this.state.newVideo)
+  }
+
+  deleteVideo = src => {
     
+    const newState = this.state;
+    const index = newState.gallery.videos.findIndex(a => a === src);
+    console.log("deleteando video")
+    if (index === -1) return;
+    newState.gallery.videos.splice(index, 1);
+    console.log("video borrada")
+    this.setState(newState); // This will update the state and trigger a rerender of the components
   
-    this.setState({
-      ...this.state,
-      images: this.state.gallery.images 
-    })}
+};
+
+addSong = e => {
+  e.preventDefault()
+  this.state.gallery.songs.push( this.state.newSong)
+}
+
+deleteSong = src => {
   
+  const newState = this.state;
+  const index = newState.gallery.songs.findIndex(a => a === src);
+  console.log("deleteando song")
+  if (index === -1) return;
+  newState.gallery.songs.splice(index, 1);
+  console.log("song borrada")
+  this.setState(newState); // This will update the state and trigger a rerender of the components
+
+};
 
   updatePortfolio = () => {
     this.artistService.fetchPortfolio(this.props.match.params.id).then(
@@ -151,14 +286,14 @@ export default class EditPortfolio extends Component {
           ...this.state,
           portfolio,
           description: description,
-          gallery:{
-          images: images,
-          videos: videos,
-          songs: songs,
-          imageDesc: imageDesc,
-          songDesc: songDesc,
-          videoDesc: videoDesc,
-          description: description
+          gallery: {
+            images: images,
+            videos: videos,
+            songs: songs,
+            imageDesc: imageDesc,
+            songDesc: songDesc,
+            videoDesc: videoDesc,
+            description: description
           }
         });
       },
@@ -171,7 +306,7 @@ export default class EditPortfolio extends Component {
 
   savePortfolio = e => {
     e.preventDefault();
-    console.log(this.state.gallery)
+    console.log(this.state.gallery);
     this.artistService.updatePortfolio(
       this.state.portfolio._id,
       this.state.description,
@@ -180,14 +315,13 @@ export default class EditPortfolio extends Component {
   };
 
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div className="edit-portfolio-div">
-      <form onSubmit={this.savePortfolio}>
-        
-        {this.state.portfolio && this.displayPortfolio()}
-        {!this.state.portfolio && <p>Loading portfolio...</p>}
-      </form>
+        <form onSubmit={this.savePortfolio}>
+          {this.state.portfolio && this.displayPortfolio()}
+          {!this.state.portfolio && <p>Loading portfolio...</p>}
+        </form>
       </div>
     );
   }

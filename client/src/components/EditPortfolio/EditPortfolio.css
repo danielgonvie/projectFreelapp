@@ -6,15 +6,88 @@
 
 .edit-img-cart{
   display: flex;
+  flex-wrap: wrap;
   flex-direction:column;
+  justify-content: center;
 }
 
 .image-edit-gallery{
   display:flex;
+  align-items: center;
 }
 
-.delete-image{
-  position: absolute;
+
+.add-image{
+  background-color: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  height: 35px;
+}
+
+.edit-video-only{
+  
+  height: 150px;
+  position: relative;
+}
+
+.delete-video{
+  position:absolute;
   bottom: 5px;
   right: 5px;
+}
+
+.edit-video-cart{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.video-edit-gallery{
+  display:flex;
+  align-items: center;
+}
+
+
+.add-video{
+  background-color: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  height: 35px;
+}
+
+
+.edit-song-only{
+  max-height: 150px;
+  max-width: 300px;
+  position: relative;
+}
+
+.delete-song{
+  position:absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.edit-song-cart{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.song-edit-gallery{
+  display:flex;
+  align-items: center;
+}
+
+
+.add-song{
+  background-color: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  height: 35px;
 }

@@ -1,0 +1,96 @@
+.signup-artist-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:black;   
+}
+
+.signup-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-top: 50px;
+  width: 400px;
+  height: 300px;
+  
+}
+
+
+.signup-fields{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.signup-upload{
+
+}
+
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.signup-button{
+  margin: 10px;
+  margin-bottom: 30px;
+  width: 150px;
+  background-color: black; 
+  border: none;
+  color: white;
+  padding: 5px 0px;
+  text-align: center;
+  border: 1px solid white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.signup-button:hover{
+margin: 10px;
+margin-bottom: 30px;
+width: 150px;
+background-color: white; 
+border: none;
+color: black;
+padding: 5px 0px;
+border: 1px solid black;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor:pointer;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PageTitle from '../../fontStyles/PageTitle'
 import AuthService from '../../services/AuthService'
-
+import "./Signup.css"
 export default class SignUp extends Component {
   constructor(props) {
     super(props)
@@ -50,16 +50,22 @@ export default class SignUp extends Component {
   render() {
     const { email, password, picture } = this.state;
     return (
-      <div>
-        <PageTitle color="black">SignUp</PageTitle>
-        <form onSubmit={this.handleSignUp}>
-          <label htmlFor="email">Email: </label>
-          <input type="text" name="email" value={email} required onChange={this.handleChange}/>
-          <label htmlFor="password">Password: </label>
-          <input type="password" value={password} name="password" required onChange={this.handleChange}/>
-          <input type="file" name="picture" onChange={this.handleUpload} />
-          <input type="submit" value="Create account"/>
+      <div className="signup-artist-page">
+      <div className="signup-box">
+      <h1 className="title">SignUp</h1>
+        <form className="signup-fields" onSubmit={this.handleSignUp}>
+          <label className="login-labels" htmlFor="email">Email: </label>
+          <input className="login-field" type="text" name="email" value={email} required onChange={this.handleChange}/>
+          <label className="login-labels" htmlFor="password">Password: </label>
+          <input className="login-field" type="password" value={password} name="password" required onChange={this.handleChange}/>
+          
+          <div class="upload-btn-wrapper">
+         <button class="btn">Upload a file</button>
+           <input className="signup-upload" type="file" name="picture" onChange={this.handleUpload} />
+        </div>
+          <input className="signup-button" type="submit" value="Create account"/>
         </form>
+      </div>
       </div>
     )
   }

@@ -86,7 +86,7 @@ export default class Navbar extends Component {
             >
               <h2>SignUp</h2>
             </Link>
-          </div>{" "}
+          </div>
         </React.Fragment>
       );
     }
@@ -96,11 +96,13 @@ export default class Navbar extends Component {
         <div className="navbar-logo">
           <Link
             style={{ textDecoration: "none" }}
-            className="navbar-logo-link"
+            className="navbar-logo-link2"
             to="/"
           >
-            {" "}
-            <h1>Logo</h1>
+            
+            <div className="title-flex">
+            <h1 className="medium-title">Freel</h1><h1 className="medium-title2">App.</h1>
+            </div>
           </Link>
         </div>
         {navbar}

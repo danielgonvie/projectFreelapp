@@ -11,7 +11,7 @@ export default class
     render() {
         return (
             <div className="search-bar">
-            <span role="img">🔎</span><input onChange={this.props.search} onKeyDown={this.props.onkey} type="text"></input>
+            <input className="search-bar2" placeholder="🔍Buscar artistas..." onChange={this.props.search} onKeyDown={this.props.onkey} type="text"></input>
 
 
             </div>

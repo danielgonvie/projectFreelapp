@@ -3,4 +3,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
+}
+
+.search-bar2{
+    width: 80vw;
+    box-shadow: 2px 2px grey;
 }

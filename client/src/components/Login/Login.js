@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PageTitle from '../../fontStyles/PageTitle'
+
 import AuthService from '../../services/AuthService';
 import "./Login.css"
 
@@ -35,16 +35,21 @@ export default class Login extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <div>
-        <PageTitle color="black">Login</PageTitle>
-        <form onSubmit={this.handleLogin}>
-          <label htmlFor="email">Email: </label>
-          <input type="text" name="email" value={email} onChange={this.handleChange}/>
-          <label htmlFor="password" >Password: </label>
-          <input type="password" name="password" value={password} onChange={this.handleChange}/>
-
-          <input type="submit" value="Login"/>
+      <div className="login-artist-page">
+      <div className="login-box">
+        <h1 className="title">Login User</h1>
+        
+        <form className="login-fields" onSubmit={this.handleLogin}>
+          <label className="login-labels" htmlFor="email">Email: </label>
+          <input className="login-field" type="text" name="email" value={email} onChange={this.handleChange}/>
+          <label className="login-labels" htmlFor="password" >Password: </label>
+          <input className="login-field" type="password" name="password" value={password} onChange={this.handleChange}/>
+          <div className="login-space-button">
+          <input className="login-button" type="submit" value="Login"/>
+          </div>
         </form>
+        </div>
+      
       </div>
     )
   }

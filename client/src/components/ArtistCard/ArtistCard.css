@@ -1,19 +1,19 @@
 .artist-tag{
     border: 2px solid black;
     border-radius: 5px;
-    width: 29%;
+    width: 23%;
    margin: 20px 0;
    display:flex;
    position:relative;
    align-items: center;
-   background-color:#181818;
+   background-color: white;
 }
 
 .artist-tag>img{
-    width: 100px;
+    width: 60px;
     border-radius: 50%;
-    border: 3px solid #559DDF;
-    margin: 10px 10px ;
+    border: 3px solid grey;
+    margin: 5px;
 
 }
 
@@ -25,6 +25,7 @@
 .artist-data>h3 {
     margin:0;
     padding:0;
+    font-size: 18px;
 }
 
 .artist-category{
@@ -47,11 +48,13 @@
 .artist-names>h3, .artist-names>h5{
     margin: 0;
     padding: 0;
+    font-size: 18px;
+    color: black;
 }
 
 .artist-names>h5{
-    color: #484647;
-    font-size: 14px;
+    color: grey;
+    font-size: 18px;
 }
 
 .artist-names{
@@ -63,7 +66,7 @@
 }
 
 .artist-info{
-    margin-top: 30px;
+    margin-left:5px;
 }
 
 .artist-enter{

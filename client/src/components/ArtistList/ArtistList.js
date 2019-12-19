@@ -94,9 +94,9 @@ class ArtistList extends React.Component {
     // const { loggedInUser } = this.props;
     const { artists } = this.state;
     return (
-      <div>
+      <div className="artist-list-thing">
       
-      <SearchBar search={e => this.searchArtists(e)} onkey={e => this.onKeyDown(e)}></SearchBar>
+      <SearchBar  search={e => this.searchArtists(e)} onkey={e => this.onKeyDown(e)}></SearchBar>
         <div className="artists-container">
           {artists && this.displayArtists()}
           {!artists && <p>Loading artists...</p> }

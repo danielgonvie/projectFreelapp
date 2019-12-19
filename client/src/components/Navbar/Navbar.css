@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    background-color: rgb(71, 71, 71);
+    background-color: black;
     z-index: 10000000;
  
     
@@ -13,7 +13,7 @@
     height: 40px;
     margin: 0;
     padding: 0;
-    border: 2px solid black;
+    border: 1.5px solid grey;
     border-radius: 50%;
 }
 
@@ -40,5 +40,37 @@
 }
 .navbar-logo-link{
     z-index: 10000000;
-    color: #D3D3D3;
+    color: white;
+}
+.navbar-logo-link2{
+    z-index: 10000000;
+    color: white;
+}
+
+.medium-title{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
+    
+}
+.medium-title2{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
+    
+    color: white;
+    background-color: #517DFC;
+}
+
+.title-flex{
+    display:flex;
+    flex-direction: row;
+}
+
+.navbar-logo-link:hover{
+    color: grey;
 }

@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
 import ArtistService from "../../services/ArtistService";
-import moment from "moment";
 import "./EditCalendar.css";
 import GoodCalendar from "../GoodCalendar/GoodCalendar";
 
 require("moment/locale/es.js");
 
-const localizer = momentLocalizer(moment);
+
 
 export default class EditCalendar extends Component {
   constructor(props) {

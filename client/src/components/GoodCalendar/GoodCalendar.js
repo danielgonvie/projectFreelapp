@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "./GoodCalendar.css"
-import { Link } from "react-router-dom";
 import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
 import ArtistService from '../../services/ArtistService';
 
@@ -76,7 +75,7 @@ export default class GoodCalendar extends Component {
     const { events } = this.state
 
     const nextEvents = events.map(existingEvent => {
-      return existingEvent.id == event.id
+      return existingEvent.id === event.id
         ? { ...existingEvent, start, end }
         : existingEvent
     })

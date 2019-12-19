@@ -1,3 +1,147 @@
-h1 {
+* {
     text-decoration: none;
 }
+
+
+.main-page-main{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.super-title{
+    font-size: 80px;
+    font-weight: bolder;
+    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.super-title2{
+    font-size: 80px;
+    font-weight: bolder;
+    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    color: white;
+    background-color: #517DFC;
+}
+
+.main-paragraph{
+    width: 70%;
+    padding-bottom: 20px;
+}
+
+.main-logins{
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.artist-logins{
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+
+}
+
+.user-logins{
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    justify-content: space-around;
+    align-items: center;
+    color: black;   
+}
+
+.logins-separator{
+    background-color: black;
+    width: 2px;
+    height: 35vh;
+}
+.black-link{
+    color: black; 
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.black-link:hover{
+    color: white; 
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 15px;
+    background-color: black;
+    transition: 0.15s ease-in;
+}
+.main-page-title{
+    display: flex;
+    flex-direction: row;
+    
+}
+.artist-logo{
+    height: 100px;
+    font-size: 20px;
+    color: black;
+    position: relative;
+}
+.artist-logo:hover{
+    height: 100px;
+    font-size: 20px;
+    color: black;
+    position: relative;
+    transition: 0.15s ease-in;
+}
+
+.user-logo{
+    height: 100px;
+    font-size: 20px;
+    color: black;
+    position: relative;
+}
+.see-artist{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    padding: 1px 6px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.see-artist:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    padding: 1px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease-in;
+}
+
+.upanddown {
+    animation: MoveUpDown 1s linear infinite;
+    position: absolute;
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 20px;
+    }
+  }
