@@ -246,8 +246,9 @@ let portfolios = [
 
       videoDesc: "Mis hermosos videos",
         videos: [
-           "https://www.youtube.com/embed/5RQ354YCHOg",
-           "https://www.youtube.com/embed/5RQ354YCHOg"
+           "https://www.youtube.com/embed/gYgT9rDzMhM",
+           "https://www.youtube.com/embed/ZWBGQo3hozw",
+           "https://www.youtube.com/embed/IoLocQdRKzg"
         ]
     }
   },
