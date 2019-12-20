@@ -312,6 +312,8 @@ button.rbc-input::-moz-focus-inner {
 .rbc-date-cell > a:active,
 .rbc-date-cell > a:visited {
   color: black;
+  margin-bottom: 0;
+  padding-bottom: 0;
   text-decoration: none;
   cursor: default;
 }

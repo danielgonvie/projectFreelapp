@@ -24,8 +24,9 @@ let artists = [
   {
     email: "photo@gmail.com",
     password: bcrypt.hashSync("photo", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Laura Vivas",
-    alias: "xPalomitax",
+    name: "Laura Fernández",
+    alias: "Cotufa",
+    picture: "https://i.pravatar.cc/400?img=48",
     location: {
       city: "Madrid",
       country: "España"
@@ -36,8 +37,8 @@ let artists = [
     contactEmail: "photopublic@gmail.com",
     contactPhone: "666555444",
     social: {
-      instagram: "@palomita_sexy",
-      other: "www.palomasexy.com"
+      instagram: "@widephotos_",
+      other: "www.cotufa.com"
     },
     calendar: undefined,
     portfolio: undefined
@@ -45,8 +46,9 @@ let artists = [
   {
     email: "model@gmail.com",
     password: bcrypt.hashSync("model", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Lorena Poza",
-    alias: "Lorena TA",
+    name: "Lorena Villaverde",
+    alias: "La teacher",
+    picture: "https://i.pravatar.cc/400?img=26",
     toggleAlias: "alias",
     location: {
       city: "Madrid",
@@ -58,8 +60,8 @@ let artists = [
     contactEmail: "modelpublic@gmail.com",
     contactPhone: "666777888",
     social: {
-      instagram: "@la_lore",
-      other: "www.xqyolovalgo.com"
+      instagram: "@hot_teacher",
+      other: "www.clasesintensas.com"
     },
     calendar: undefined,
     portfolio: undefined
@@ -67,7 +69,8 @@ let artists = [
   {
     email: "video@gmail.com",
     password: bcrypt.hashSync("video", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Dani Vicario",
+    name: "Daniel Pérez",
+    picture: "https://i.pravatar.cc/400?img=58",
     alias: "No",
     toggleAlias: "name",
     location: {
@@ -78,10 +81,10 @@ let artists = [
     subcategory: "Videógrafo",
     availability: "100",
     contactEmail: "videopublic@gmail.com",
-    contactPhone: "666999000",
+    contactPhone: "668949023",
     social: {
-      instagram: "@d.vicario",
-      other: "www.dvicario.es"
+      instagram: "@d.perez",
+      other: "www.dperez.es"
     },
     calendar: undefined,
     portfolio: undefined
@@ -90,6 +93,7 @@ let artists = [
     email: "tattoo@gmail.com",
     password: bcrypt.hashSync("tattoo", bcrypt.genSaltSync(bcryptSalt)),
     name: "Sito Crack",
+    picture: "https://ca.slack-edge.com/T02CQ4EN4-UA8BNSXL7-71c20a86bce9-512",
     alias: "TatuSito",
     toggleAlias: "alias",
     location: {
@@ -111,7 +115,8 @@ let artists = [
   {
     email: "musicdj@gmail.com",
     password: bcrypt.hashSync("musicdj", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Carlos Trujillo",
+    name: "Carlos Díaz",
+    picture: "https://i.pravatar.cc/400?img=14",
     alias: "Dos Attack",
     toggleAlias: "both",
     location: {
@@ -134,8 +139,9 @@ let artists = [
   {
     email: "guitarist@gmail.com",
     password: bcrypt.hashSync("gutarist", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Manué Álvarez",
+    name: "Manuél Álvarez",
     alias: "Er Sevillano",
+    picture: "https://media.licdn.com/dms/image/C4D03AQERj-g9d54Apg/profile-displayphoto-shrink_200_200/0?e=1582156800&v=beta&t=X_F0Pj-tMhbiNn_J_iYTvzuHh4DCy5I98TVBQhXGXSo",
     toggleAlias: "both",
     location: {
       city: "Sevilla",
@@ -157,9 +163,10 @@ let artists = [
   {
     email: "designweb@gmail.com",
     password: bcrypt.hashSync("designweb", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Fran Naranjo",
+    name: "Fran Mollanjo",
     alias: "No",
     toggleAlias: "name",
+    picture: "https://i.pravatar.cc/400?img=13",
     location: {
       city: "Canarias",
       country: "España"
@@ -180,6 +187,7 @@ let artists = [
     email: "designlogo@gmail.com",
     password: bcrypt.hashSync("designlogo", bcrypt.genSaltSync(bcryptSalt)),
     name: "Hector Arrieta",
+    picture: "https://i.pravatar.cc/400?img=15",
     alias: "Grxxts",
     toggleAlias: "both",
     location: {
@@ -203,18 +211,18 @@ let artists = [
 let portfolios = [
   {
     description:
-      "Me gusta capturar el momento sacandole fotos a la vida de manera sensual y fantástica.",
+      "Desde que era pequeña le cogía prestada a escondidas la cámara analógica a mi madre y siempre me iba al bosque a sacarle fotos a las plantas. Me apasiona la fotografía y no me imagino la vida sin ella. Fotografía macro <3",
     gallery: {
       imageDesc:
-        "Me atrevería a decir que estás son las fotos que mejor me representan",
+        "Mis mejores capturas",
       images: [
-        { original: "https://i.ytimg.com/vi/fWpzkACkiTs/maxresdefault.jpg" },
-        { original: "https://i.ytimg.com/vi/lhOlOFxpeSs/maxresdefault.jpg" },
-        { original: "https://k62.kn3.net/taringa/4/2/A/A/E/4/AgustinQ10/997.jpg"}],
+        { original: "https://images.wallpaperscraft.com/image/leaf_dew_drops_146450_1920x1200.jpg" },
+        { original: "https://images.wallpaperscraft.com/image/fly_insect_macro_111006_2560x1440.jpg" },
+        { original: "https://i.pinimg.com/originals/49/d6/b2/49d6b25dbee51c655c7d7a1ce3af1f3d.jpg"}],
         videoDesc: "Mis hermosos videos",
         videos: [
-           "https://www.youtube.com/embed/5RQ354YCHOg",
-           "https://www.youtube.com/embed/5RQ354YCHOg"
+           "https://www.youtube.com/embed/YJG62Zs9vGE",
+           "https://www.youtube.com/embed/J6pbiOe7buY"
         ]
       
     }
@@ -226,9 +234,9 @@ let portfolios = [
       imageDesc:
         "Me atrevería a decir que estás son las fotos que mejor me representan",
       images: [
-        { original: "https://i.ytimg.com/vi/fWpzkACkiTs/maxresdefault.jpg"},
-        { original: "https://i.ytimg.com/vi/lhOlOFxpeSs/maxresdefault.jpg"},
-        { original: "https://k62.kn3.net/taringa/4/2/A/A/E/4/AgustinQ10/997.jpg"}
+        { original: "https://www.freegreatpicture.com/files/87/16718-widescreen-model-actress.jpg"},
+        { original: "https://www.freegreatpicture.com/files/87/17059-widescreen-model-actress.jpg"},
+        { original: "https://wallpapersmug.com/download/1920x1200/f9797c/brown-eyes-beautiful-girl-model.jpg"}
       ]
     }
   },
@@ -258,25 +266,25 @@ let portfolios = [
   {
     description: "Que te voy a contar que no sepas 🕶 ",
     gallery: {
-      imageDesc: "Xo perreando en la disco",
+      imageDesc: "Yo en mi máximo apogeo",
       images: [
         { original: "https://www.esneca.com/wp-content/uploads/DJ-PROFESIONAL.jpg"},
-        { original: "http://djmagla.com/wp-content/uploads/2019/03/Turn-Up-Charlie-664x400.jpg"},
-        { original: "https://m.eldiario.es/cultura/dj-espanola-Fatima-Hajji-Facebook_EDIIMA20160407_0356_19.jpg"}
+        { original: "https://wallpapersmug.com/download/2560x1440/d226a9/alan-walker-musician-dj.jpg"},
+        { original: "https://wallpapersmug.com/download/1920x1200/1ca559/marshmello-music-dj.jpg"}
       ],
       songDesc: "Mis temasos loketeeeeee",
       songs: [
+       'https://soundcloud.com/lyamsterdam/premiere-pional-isaac-in-fsharp-riverette',
        'https://soundcloud.com/les-yeux-orange/lyo-dos-attack',
-       'https://soundcloud.com/les-yeux-orange/lyo-dos-attack',
-       'https://soundcloud.com/les-yeux-orange/lyo-dos-attack'
+       'https://soundcloud.com/les-yeux-orange/premiere-tiger-woods-feat-alejandro-paz-como-bailar-riverette'
       ]
     }
   },
   {
     description:
-      "Illo un papa yón, una pissa con pexuguita. Me encuentro dinero en los bolsos de las señoras, soy muy afortunado.",
+      "La música es un arte, illo. Quien se meta con sevilla se mete conmigo. Vivan los serranetes y la pizza. Soy el mejor guitarrista der Mundo. Buah, increíble!",
     gallery: {
-      songs: ['https://soundcloud.com/les-yeux-orange/lyo-dos-attack',
+      songs: ['https://soundcloud.com/totisoler/sevilla',
        'https://soundcloud.com/les-yeux-orange/lyo-dos-attack',
        'https://soundcloud.com/les-yeux-orange/lyo-dos-attack'
       ]
@@ -288,8 +296,8 @@ let portfolios = [
     gallery: {
       imageDesc: "Un par de proyectos",
       images: [
-        { original: "https://cdn.dribbble.com/users/674925/screenshots/8975146/media/1d006555088b5f1d5d02f6e07d35aa2d.png"},
-        { original: "https://cdn.dribbble.com/users/1732969/screenshots/8999363/media/e9287ea25ec24bd652702a901926e9b5.png"},
+        { original: "https://storage.stfalcon.com/uploads/images/5c4b091080730.png"},
+        { original: "https://tracyvanderschyff.files.wordpress.com/2018/05/2018-05-03-21_51_19-how-to-choose-the-right-pictures-for-your-banners.png"},
           
       ]
     }
@@ -302,7 +310,7 @@ let portfolios = [
       images: [
         { original: "https://www.sensationcreative.com/wp-content/uploads/2017/12/Logo-examples-3.jpg"},
         { original: "https://i.pinimg.com/originals/3f/4c/1f/3f4c1ff3edeb347969a3b9eebe92b554.jpg"},
-        { original: "https://secureservercdn.net/104.238.71.97/y51.c67.myftpupload.com/wp-content/uploads/2019/06/taste-of-bim-vector-logo.jpg"}
+        { original: "https://i.pinimg.com/originals/3e/6c/fa/3e6cfa15dafc901bea43af58fa9fb275.jpg"}
       ]
     }
   }
@@ -316,99 +324,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -425,99 +433,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -534,99 +542,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -643,99 +651,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -752,99 +760,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -861,99 +869,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -970,99 +978,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -1079,99 +1087,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 3, 0),
-        end: new Date(2019, 3, 1)
+        start: new Date(2019, 11, 0),
+        end: new Date(2019, 11, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 3, 7),
-        end: new Date(2019, 3, 10)
+        start: new Date(2019, 11, 7),
+        end: new Date(2019, 11, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2016, 2, 13, 0, 0, 0),
-        end: new Date(2016, 2, 20, 0, 0, 0)
+        start: new Date(2019, 11, 19, 0, 0, 0),
+        end: new Date(2019, 11, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2016, 10, 6, 0, 0, 0),
-        end: new Date(2016, 10, 13, 0, 0, 0)
+        start: new Date(2019, 11, 5, 0, 0, 0),
+        end: new Date(2019, 11, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 3, 9, 0, 0, 0),
-        end: new Date(2019, 3, 10, 0, 0, 0)
+        start: new Date(2019, 11, 25, 0, 0, 0),
+        end: new Date(2019, 11, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 3, 11),
-        end: new Date(2019, 3, 13),
+        start: new Date(2019, 11, 27),
+        end: new Date(2019, 11, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 10, 30, 0, 0),
-        end: new Date(2019, 3, 12, 12, 30, 0, 0),
+        start: new Date(2019, 11, 02, 10, 30, 0, 0),
+        end: new Date(2019, 11, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 3, 12, 12, 0, 0, 0),
-        end: new Date(2019, 3, 12, 13, 0, 0, 0),
+        start: new Date(2019, 11, 06, 11, 0, 0, 0),
+        end: new Date(2019, 11, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 3, 12, 14, 0, 0, 0),
-        end: new Date(2019, 3, 12, 15, 0, 0, 0)
+        start: new Date(2019, 11, 12, 14, 0, 0, 0),
+        end: new Date(2019, 11, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 3, 12, 17, 0, 0, 0),
-        end: new Date(2019, 3, 12, 17, 30, 0, 0),
+        start: new Date(2019, 11, 12, 17, 0, 0, 0),
+        end: new Date(2019, 11, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 3, 12, 20, 0, 0, 0),
-        end: new Date(2019, 3, 12, 21, 0, 0, 0)
+        start: new Date(2019, 11, 12, 20, 0, 0, 0),
+        end: new Date(2019, 11, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 3, 13, 7, 0, 0),
-        end: new Date(2019, 3, 13, 10, 30, 0)
+        start: new Date(2019, 11, 13, 7, 0, 0),
+        end: new Date(2019, 11, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 18, 2, 0, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 3, 17, 19, 30, 0),
-        end: new Date(2019, 3, 17, 23, 30, 0)
+        start: new Date(2019, 11, 17, 19, 30, 0),
+        end: new Date(2019, 11, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 3, 20, 19, 30, 0),
-        end: new Date(2019, 3, 22, 2, 0, 0)
+        start: new Date(2019, 11, 20, 19, 30, 0),
+        end: new Date(2019, 11, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -1185,19 +1193,22 @@ let calendars = [
 
 let users = [
   {
-    email: "patata@gmail.com",
+    email: "lorena@gmail.com",
     password: bcrypt.hashSync("patata", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Patata Fernández"
+    name: "Lorena Poza",
+    picture: "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light",
   },
   {
-    email: "naranja@gmail.com",
+    email: "carlos@gmail.com",
     password: bcrypt.hashSync("naranja", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Naranja González"
+    name: "Carlos Trujillo",
+    picture: "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortRound&accessoriesType=Wayfarers&hairColor=SilverGray&facialHairType=BeardMagestic&facialHairColor=Black&clotheType=BlazerShirt&clotheColor=PastelYellow&graphicType=Diamond&eyeType=EyeRoll&eyebrowType=UpDown&mouthType=Serious&skinColor=Light",
   },
   {
-    email: "daniel@gmail.com",
+    email: "sito@gmail.com",
     password: bcrypt.hashSync("daniel", bcrypt.genSaltSync(bcryptSalt)),
-    name: "Daniel González"
+    name: "Sito Sito",
+    picture: "https://avataaars.io/?avatarStyle=Transparent&topType=WinterHat4&accessoriesType=Kurt&hatColor=Red&facialHairType=BeardMedium&facialHairColor=Platinum&clotheType=Hoodie&clotheColor=PastelYellow&eyeType=EyeRoll&eyebrowType=AngryNatural&mouthType=Twinkle&skinColor=Light",
   }
 ];
 
