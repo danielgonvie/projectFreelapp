@@ -4,6 +4,7 @@ import Artist from '../Artist/Artist';
 import PruebaCalendar from '../Prueba/PruebaCalendar/PruebaCalendar';
 import './ArtistView.css';
 import Portfolio from '../Portfolio/Portfolio';
+import Footer from '../Footer/Footer';
 
 export default class ArtistView extends Component {
     constructor(props) {
@@ -63,7 +64,7 @@ export default class ArtistView extends Component {
                 {this.state.artist && this.displayArtist()}
                  {!this.state.artist && <p>Loading artists...</p> }
                  </div>
-            
+                 <Footer></Footer>
             </div>
         )
     }

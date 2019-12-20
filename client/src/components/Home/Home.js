@@ -30,8 +30,8 @@ export default class Home extends Component {
                 <div className="logins-separator"></div>
                 <div className="user-logins">
                 <div className="user-logo"><img className="user-logo" src="/img/team.png"></img></div>
-                <Link className="black-link" to="/login"> Logeate como usuario</Link>
-                <Link className="black-link" to="/signup">Registrate como usuario</Link>
+                <Link className="black-link" to="/login"> Logeate como cliente</Link>
+                <Link className="black-link" to="/signup">Registrate como cliente</Link>
                 </div>
                 </div>
                 </React.Fragment>
@@ -46,7 +46,14 @@ export default class Home extends Component {
                 <div className="main-page-title">
                 <h1 className="super-title">Freel</h1><h1 className="super-title2">App.</h1>
                 </div>
-                <p className="main-paragraph">5 Sexy Ways To Improve Your FREELAPP. // The Hidden Mystery Behind FREELAPP. // Why Ignoring FREELAPP. Will Cost You Time and Sales // Marriage And FREELAPP. Have More In Common Than You Think // Succeed With FREELAPP. In 24 Hours</p>
+                <div className="paragraphs">
+                <p className="main-paragraph">FreelApp es una página que facilita la conexión entre artistas y clientes.</p>
+                <p className="main-paragraph">
+                Basada en calendarios públicos los clientes pueden ver la disponibilidad de sus artistas en tan solo dos clicks. 
+                </p>
+                <p className="main-paragraph">
+                Fácil cómodo y sencillo.</p>
+                </div>
                 {main}
                 
             </div>

@@ -1,3 +1,45 @@
+.edit-portfolio-div{
+  color: black;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.submit-button-edit{
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  bottom: 50px;
+  right: 100px;
+  cursor: pointer;
+}
+
+.submit-button-edit:hover{
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  bottom: 50px;
+  right: 100px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.edit-description{
+  display: flex;
+  flex-direction: column;
+}
+.input-general-description{
+  width: 700px;
+  
+}
+.edit-images{
+  margin-top: 500px;
+}
 .edit-img-only{
   
   height: 150px;
@@ -10,13 +52,35 @@
   flex-direction:column;
   justify-content: center;
 }
-
+.edit-img-description{
+  display: flex;
+  flex-direction: column;
+  width: 710px;
+}
+.just-videos{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.edit-gallery{
+  margin-top: 40px;
+}
 .image-edit-gallery{
   display:flex;
   align-items: center;
 }
-
-
+.edit-video-description{
+  
+  display: flex;
+  flex-direction: column;
+  width: 710px;
+}
+.edit-song-description{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 710px;
+}
 .add-image{
   background-color: none;
   border: none;

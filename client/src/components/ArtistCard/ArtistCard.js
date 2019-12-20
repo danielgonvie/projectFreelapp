@@ -57,7 +57,7 @@ export default class Artist extends Component {
           </h5>
         </div>
         <Link className="artist-enter" to={"/artists/" + this.props.artist.id}>
-          ->
+          Enter
         </Link>
       </div>
     );

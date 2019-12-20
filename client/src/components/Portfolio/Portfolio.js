@@ -75,7 +75,7 @@ export default class extends Component {
               return (
                 <React.Fragment>
                   <iframe title="artist-video" className="youtube-frame" src={video}></iframe>
-                  {/* <button >Delete</button> */}
+                  
                 </React.Fragment>
               );
             })}

@@ -24,7 +24,7 @@
 .greater-calendar.rbc-calendar {
   box-sizing: border-box;
   height: 400px;
- 
+  color: black;
 
   display: flex;
   flex-direction: column;
@@ -90,7 +90,8 @@
 .greater-calendar .rbc-header > a,
 .greater-calendar .rbc-header > a:active,
 .greater-calendar .rbc-header > a:visited {
-  color: inherit;
+  color: black;
+  font-size: 18px;
   text-decoration: none;
 }
 
@@ -311,7 +312,8 @@
 .rbc-date-cell > a,
 .rbc-date-cell > a:active,
 .rbc-date-cell > a:visited {
-  color: inherit;
+  color: black;
+  font-size: 18px;
   text-decoration: none;
   cursor: default;
 }
@@ -637,11 +639,11 @@
   position: absolute;
   top: 0px;
   left: -5px;
-  color: rgba(255, 255, 255, 0.5);
+  color: black;
   font-size: 18px;
   font-weight: bolder;
   background-color: rgba(255, 255, 255, 0.5);
-  border: 1.5px solid rgb(243, 243, 243);
+  border: 1.5px solid black;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -656,11 +658,11 @@
   position: absolute;
   top: 0px;
   left: -5px;
-  color: rgb(240, 224, 0);
+  color: white;
   font-size: 18px;
   font-weight: bolder;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1.5px solid rgb(240, 224, 0);
+  background-color: black;
+  border: 1.5px solid black;
   text-decoration: none;
   display: flex;
   justify-content: center;

@@ -14,6 +14,8 @@ import Index from './components/Index/Index';
 import Navbar from './components/Navbar/Navbar';
 import EditCalendar from './components/EditCalendar/EditCalendar';
 import EditPortfolio from './components/EditPortfolio/EditPortfolio';
+import Footer from './components/Footer/Footer';
+import BadRoute from './components/BadRoute/BadRoute';
 
 class App extends React.Component {
   constructor(props) {
@@ -67,7 +69,11 @@ class App extends React.Component {
             <Route exact path="/" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><Home {...match} user={user} /></React.Fragment>}/>            
             <Route exact path="/artists/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><ArtistView {...match} user={user} /></React.Fragment>}/>
             <Route exact path="/calendar/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><EditCalendar {...match} user={user} /></React.Fragment>}/>
-            <Route exact path="/portfolio/:id" render={(match) => <React.Fragment><EditPortfolio {...match} user={user} /></React.Fragment>}/>
+            <Route exact path="/portfolio/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><EditPortfolio {...match} user={user} /></React.Fragment>}/>
+            <Route exact path="/loginArtist" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>} />  
+            <Route exact path="/login" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>} />  
+            <Route exact path="/signup" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>} />
+            
           </Switch> }
           
           {!user && <Switch>
@@ -75,7 +81,13 @@ class App extends React.Component {
             <Route exact path="/login" render={(match) => <React.Fragment><Login {...match} setUser={this.setUser} /></React.Fragment>} />  
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
             <Route exact path="/" render={(match) => <React.Fragment><Home {...match} user={user} /></React.Fragment>}/>
+            <Route exact path="/artists"  render={(match) => <React.Fragment> <Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/> 
+            <Route exact path="/prueba"  render={(match) => <React.Fragment> <Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/> 
+            <Route exact path="/artists/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/>
+            <Route exact path="/calendar/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/>
+            <Route exact path="/portfolio/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/>
           </Switch> }
+          <Footer></Footer>
         </header>
       </div>
     );

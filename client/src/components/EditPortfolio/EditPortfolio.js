@@ -60,23 +60,29 @@ export default class EditPortfolio extends Component {
 
     return (
       <React.Fragment>
+       <input className="submit-button-edit" type="submit" value="Guardar" />
         <div className="edit-description">
+       
           <label>Editar la descripción general: </label>
           <input
+          className="input-general-description"
             type="text"
             value={this.state.description}
             onChange={e => this.handleChangeDesc(e)}
+            placeholder="Descripción general de lo que haces"
             name="description"
           ></input>
         </div>
 
         <div className="edit-gallery">
+        <div className="just-images">
           <div className="edit-img-description">
             <label>Editar la descripcion de las imágenes: </label>
             <input
               type="text"
               value={this.state.gallery.imageDesc}
               name="imageDesc"
+              placeholder="Descripción de las imágenes"
               onChange={this.handleChange}
             ></input>
           </div>
@@ -92,7 +98,7 @@ export default class EditPortfolio extends Component {
                     src={image.original}
                     onClick={() => this.deleteImg(image._id)}
                     alt="Imagen errónea. Click para borrar."
-                  />{" "}
+                  />
                   
                 </div>
               ))}
@@ -104,12 +110,14 @@ export default class EditPortfolio extends Component {
               name="newImg"
               value={this.state.newImg}
               onChange={e => this.handleChangeNewImg(e)}
+              placeholder="Escribe la url de la imagen"
             ></input>
             <button className="add-image" onClick={(e) => this.addImg(e)}>➕</button>
 
             </div>
           </div>
-
+          </div>
+                <div className="just-videos">
           <div className="edit-video-description">
             <label>Editar la descripcion de los vídeos: </label>
             <input
@@ -117,6 +125,7 @@ export default class EditPortfolio extends Component {
               value={this.state.gallery.videoDesc}
               name="videoDesc"
               onChange={this.handleChange}
+              placeholder="Descripción de los vídeos"
             ></input>
           </div>
 
@@ -143,10 +152,12 @@ export default class EditPortfolio extends Component {
               name="newVideo"
               value={this.state.newVideo}
               onChange={e => this.handleChangeNewVideo(e)}
+              placeholder="Url embebida del vídeo"
             ></input>
             <button className="add-video" onClick={(e) => this.addVideo(e)}>➕</button>
 
             </div>
+          </div>
           </div>
 
           <div className="edit-song-description">
@@ -156,8 +167,9 @@ export default class EditPortfolio extends Component {
               value={this.state.gallery.songDesc}
               name="songDesc"
               onChange={this.handleChange}
+              placeholder="Descripción de las canciones"
             ></input>
-            <input type="submit" value="Guardar" />
+            
           </div>
 
           <div className="edit-song-cart">
@@ -177,6 +189,7 @@ export default class EditPortfolio extends Component {
               name="newSong"
               value={this.state.newSong}
               onChange={e => this.handleChangeNewSong(e)}
+              placeholder="Añade la url de soundcloud"
             ></input>
             <button className="add-song" onClick={(e) => this.addSong(e)}>➕</button>
 
@@ -217,7 +230,7 @@ export default class EditPortfolio extends Component {
 
   addVideo = e => {
     e.preventDefault()
-    this.state.gallery.videos.push( this.state.newVideo)
+    this.setState({...this.state, videos: this.state.gallery.videos.push( this.state.newVideo)})
   }
 
   deleteVideo = src => {
@@ -234,7 +247,7 @@ export default class EditPortfolio extends Component {
 
 addSong = e => {
   e.preventDefault()
-  this.state.gallery.songs.push( this.state.newSong)
+  this.setState({...this.state, videos: this.state.gallery.songs.push( this.state.newSong)})
 }
 
 deleteSong = src => {

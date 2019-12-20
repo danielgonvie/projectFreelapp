@@ -5,6 +5,7 @@ import ArtistCard from '../ArtistCard/ArtistCard';
 import './ArtistList.css'
 import SearchBar from '../SearchBar/SearchBar';
 
+
 class ArtistList extends React.Component {
   constructor(props) {
     super(props);
@@ -100,7 +101,9 @@ class ArtistList extends React.Component {
         <div className="artists-container">
           {artists && this.displayArtists()}
           {!artists && <p>Loading artists...</p> }
+          
         </div>
+        
       </div>
     )
   }

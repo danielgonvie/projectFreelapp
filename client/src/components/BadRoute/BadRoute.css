@@ -1,0 +1,38 @@
+.bad-route{
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.something-wrong{
+    margin-bottom: 2px;
+}
+
+.wrong-link{
+    text-decoration: none;
+    color:black;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.bad-title{
+    font-size: 50px;
+    font-weight: bolder;
+    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
+    
+}
+.bad-title2{
+    font-size: 50px;
+    font-weight: bolder;
+    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
+    
+    color: white;
+    background-color: #517DFC;
+}

@@ -1,18 +1,32 @@
 .artist-tag{
     border: 2px solid black;
     border-radius: 5px;
-    width: 23%;
+    width: 30%;
    margin: 20px 0;
    display:flex;
    position:relative;
    align-items: center;
    background-color: white;
+   box-shadow: 5px 5px rgba(0, 0, 0, 0.116);
+}
+.artist-tag:hover{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 30%;
+   margin: 20px 0;
+   display:flex;
+   position:relative;
+   align-items: center;
+   background-color: white;
+   box-shadow: 5px 5px black;
+   transition: 0.15s ease-in;
 }
 
 .artist-tag>img{
     width: 60px;
     border-radius: 50%;
-    border: 3px solid grey;
+    border: 2px solid black;
+    box-shadow: 1px 1px grey;
     margin: 5px;
 
 }
@@ -41,7 +55,7 @@
     padding-top: 5px;
     margin: 0;
     color: grey;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 
@@ -72,6 +86,21 @@
 .artist-enter{
     position:absolute;
     bottom: 40%;
-    right: 20px;
+    right: 10px;
+    bottom: 5px;
     font-size:15px;
+    color: white;
+    background-color: black;
+    padding: 0 2px;
+}
+
+.logo-img{
+    height: 25px;
+    width: 25px;
+}
+
+.artist-location{
+    color: grey;
+    font-size: 14px;
+    margin-top: 4px;
 }
