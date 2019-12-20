@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PageTitle from '../../fontStyles/PageTitle'
 import AuthService from '../../services/AuthService'
 import "./Signup.css"
+import { Link } from 'react-router-dom'
 export default class SignUp extends Component {
   constructor(props) {
     super(props)
@@ -51,6 +52,9 @@ export default class SignUp extends Component {
     const { email, password, picture } = this.state;
     return (
       <div className="signup-artist-page">
+            <Link className="back-link bounce" to="/">
+      <h1 className="absolute-arrow">⇠ Volver</h1>
+      </Link>
       <div className="signup-box">
       <h1 className="title">SignUp</h1>
         <form className="signup-fields" onSubmit={this.handleSignUp}>

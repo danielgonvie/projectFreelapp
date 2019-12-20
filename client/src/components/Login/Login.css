@@ -60,6 +60,7 @@ input[type=text] {
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
+      cursor: pointer;
   }
 
   .login-button:hover{
@@ -82,3 +83,53 @@ input[type=text] {
       justify-content: center;
       align-items: center;
   }
+
+  .absolute-arrow{
+      position:absolute;
+      top: 5px;
+      left: 20px;
+      display: flex;
+      flex-direction: row;
+  }
+
+  .back-link{
+      color:black;
+      cursor: pointer;
+
+  }
+
+  .bounce {
+    position:absolute;
+    top: 5px;
+    left: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
+}
+ 
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateX(0);}	
+	40% {-webkit-transform: translateX(-30px);}
+	60% {-webkit-transform: translateX(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateX(0);}
+	40% {-moz-transform: translateX(-30px);}
+	60% {-moz-transform: translateX(-15px);}
+}
+ 
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateX(0);}
+	40% {-o-transform: translateX(-30px);}
+	60% {-o-transform: translateX(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+	40% {transform: translateX(-30px);}
+	60% {transform: translateX(-15px);}
+}

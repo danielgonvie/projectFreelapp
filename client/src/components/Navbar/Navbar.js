@@ -15,12 +15,11 @@ export default class Navbar extends Component {
 
   handleLogout = e => {
     const { history } = this.props;
+    
     e.preventDefault();
     this.authService.logout(this.state).then(
       () => {
-        this.setState = {
-          user: null
-        };
+        this.setState({user :null})
         history.push("/");
       },
       error => {

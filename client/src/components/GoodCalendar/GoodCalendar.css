@@ -676,3 +676,36 @@
 .link-to-edit:hover {
   display: inline-block;
 }
+
+.last-button {
+  background-color: white; /* Green */
+  border: 1px solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.last-button:hover {
+  background-color: black; /* Green */
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.last-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  width: 100vw;
+}

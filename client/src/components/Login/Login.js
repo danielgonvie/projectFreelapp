@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import AuthService from '../../services/AuthService';
 import "./Login.css"
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
   constructor(props) {
@@ -36,6 +37,9 @@ export default class Login extends Component {
     const { email, password } = this.state;
     return (
       <div className="login-artist-page">
+      <Link  className="back-link bounce" to="/">
+      <h1 className="absolute-arrow">⇠ Volver</h1>
+      </Link>
       <div className="login-box">
         <h1 className="title">Login User</h1>
         

@@ -101,8 +101,8 @@ export default class GoodCalendar extends Component {
 
 
     return (
-      <div >
-        <button onClick={(e) => this.updateEvents(e)}>Guardar cambios</button>
+      <div className="last-div">
+        <button className="last-button" onClick={(e) => this.updateEvents(e)}>Guardar cambios</button>
         <DnDCalendar
           selectable
           defaultDate={moment().toDate()}
