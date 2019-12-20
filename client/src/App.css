@@ -66,3 +66,7 @@ button{
   background: black; 
   border-radius: 10px;
 }
+
+.signup-upload{
+  cursor:pointer;
+}

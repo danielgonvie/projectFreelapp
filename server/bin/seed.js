@@ -1195,19 +1195,19 @@ let calendars = [
 let users = [
   {
     email: "lorena@gmail.com",
-    password: bcrypt.hashSync("patata", bcrypt.genSaltSync(bcryptSalt)),
+    password: bcrypt.hashSync("lorena", bcrypt.genSaltSync(bcryptSalt)),
     name: "Lorena Poza",
     picture: "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light",
   },
   {
     email: "carlos@gmail.com",
-    password: bcrypt.hashSync("naranja", bcrypt.genSaltSync(bcryptSalt)),
+    password: bcrypt.hashSync("carlos", bcrypt.genSaltSync(bcryptSalt)),
     name: "Carlos Trujillo",
     picture: "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortRound&accessoriesType=Wayfarers&hairColor=SilverGray&facialHairType=BeardMagestic&facialHairColor=Black&clotheType=BlazerShirt&clotheColor=PastelYellow&graphicType=Diamond&eyeType=EyeRoll&eyebrowType=UpDown&mouthType=Serious&skinColor=Light",
   },
   {
     email: "sito@gmail.com",
-    password: bcrypt.hashSync("daniel", bcrypt.genSaltSync(bcryptSalt)),
+    password: bcrypt.hashSync("sito", bcrypt.genSaltSync(bcryptSalt)),
     name: "Sito Sito",
     picture: "https://avataaars.io/?avatarStyle=Transparent&topType=WinterHat4&accessoriesType=Kurt&hatColor=Red&facialHairType=BeardMedium&facialHairColor=Platinum&clotheType=Hoodie&clotheColor=PastelYellow&eyeType=EyeRoll&eyebrowType=AngryNatural&mouthType=Twinkle&skinColor=Light",
   }
