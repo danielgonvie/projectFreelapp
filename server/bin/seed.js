@@ -325,99 +325,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -434,99 +434,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -543,99 +543,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -652,99 +652,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -761,99 +761,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -870,99 +870,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -979,99 +979,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,
@@ -1088,99 +1088,99 @@ let calendars = [
         id: 0,
         title: "All Day Event very long title",
         allDay: true,
-        start: new Date(2019, 11, 0),
-        end: new Date(2019, 11, 1)
+        start: new Date(2020, 0, 0),
+        end: new Date(2020, 0, 1)
       },
       {
         id: 1,
         title: "Long Event",
-        start: new Date(2019, 11, 7),
-        end: new Date(2019, 11, 10)
+        start: new Date(2020, 0, 7),
+        end: new Date(2020, 0, 10)
       },
 
       {
         id: 2,
         title: "DTS STARTS",
-        start: new Date(2019, 11, 19, 0, 0, 0),
-        end: new Date(2019, 11, 22, 0, 0, 0)
+        start: new Date(2020, 0, 19, 0, 0, 0),
+        end: new Date(2020, 0, 22, 0, 0, 0)
       },
 
       {
         id: 3,
         title: "DTS ENDS",
-        start: new Date(2019, 11, 5, 0, 0, 0),
-        end: new Date(2019, 11, 8, 0, 0, 0)
+        start: new Date(2020, 0, 5, 0, 0, 0),
+        end: new Date(2020, 0, 8, 0, 0, 0)
       },
 
       {
         id: 4,
         title: "Some Event",
-        start: new Date(2019, 11, 25, 0, 0, 0),
-        end: new Date(2019, 11, 26, 0, 0, 0)
+        start: new Date(2020, 0, 25, 0, 0, 0),
+        end: new Date(2020, 0, 26, 0, 0, 0)
       },
       {
         id: 5,
         title: "Conference",
-        start: new Date(2019, 11, 27),
-        end: new Date(2019, 11, 28),
+        start: new Date(2020, 0, 27),
+        end: new Date(2020, 0, 28),
         desc: "Big conference for important people"
       },
       {
         id: 6,
         title: "Meeting",
-        start: new Date(2019, 11, 02, 10, 30, 0, 0),
-        end: new Date(2019, 11, 02, 11, 30, 0, 0),
+        start: new Date(2020, 0, 02, 10, 30, 0, 0),
+        end: new Date(2020, 0, 02, 11, 30, 0, 0),
         desc: "Pre-meeting meeting, to prepare for the meeting"
       },
       {
         id: 7,
         title: "Lunch",
-        start: new Date(2019, 11, 06, 11, 0, 0, 0),
-        end: new Date(2019, 11, 06, 13, 0, 0, 0),
+        start: new Date(2020, 0, 06, 11, 0, 0, 0),
+        end: new Date(2020, 0, 06, 13, 0, 0, 0),
         desc: "Power lunch"
       },
       {
         id: 8,
         title: "Meeting",
-        start: new Date(2019, 11, 12, 14, 0, 0, 0),
-        end: new Date(2019, 11, 12, 15, 0, 0, 0)
+        start: new Date(2020, 0, 12, 14, 0, 0, 0),
+        end: new Date(2020, 0, 12, 15, 0, 0, 0)
       },
       {
         id: 9,
         title: "Happy Hour",
-        start: new Date(2019, 11, 12, 17, 0, 0, 0),
-        end: new Date(2019, 11, 12, 17, 30, 0, 0),
+        start: new Date(2020, 0, 12, 17, 0, 0, 0),
+        end: new Date(2020, 0, 12, 17, 30, 0, 0),
         desc: "Most important meal of the day"
       },
       {
         id: 10,
         title: "Dinner",
-        start: new Date(2019, 11, 12, 20, 0, 0, 0),
-        end: new Date(2019, 11, 12, 21, 0, 0, 0)
+        start: new Date(2020, 0, 12, 20, 0, 0, 0),
+        end: new Date(2020, 0, 12, 21, 0, 0, 0)
       },
       {
         id: 11,
         title: "Birthday Party",
-        start: new Date(2019, 11, 13, 7, 0, 0),
-        end: new Date(2019, 11, 13, 10, 30, 0)
+        start: new Date(2020, 0, 13, 7, 0, 0),
+        end: new Date(2020, 0, 13, 10, 30, 0)
       },
       {
         id: 12,
         title: "Late Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 18, 2, 0, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 18, 2, 0, 0)
       },
       {
         id: 12.5,
         title: "Late Same Night Event",
-        start: new Date(2019, 11, 17, 19, 30, 0),
-        end: new Date(2019, 11, 17, 23, 30, 0)
+        start: new Date(2020, 0, 17, 19, 30, 0),
+        end: new Date(2020, 0, 17, 23, 30, 0)
       },
       {
         id: 13,
         title: "Multi-day Event",
-        start: new Date(2019, 11, 20, 19, 30, 0),
-        end: new Date(2019, 11, 22, 2, 0, 0)
+        start: new Date(2020, 0, 20, 19, 30, 0),
+        end: new Date(2020, 0, 22, 2, 0, 0)
       },
       {
         id: 14,

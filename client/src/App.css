@@ -4,6 +4,9 @@
   min-height: 100vh;
   background-color: #ffffff;
   position: relative;
+  width: 100vw;
+  max-width: 1366px;
+
 }
 button{
   cursor:pointer;
