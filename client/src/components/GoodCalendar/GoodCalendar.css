@@ -211,6 +211,7 @@
   cursor: pointer;
   width: 100%;
   text-align: left;
+  
 }
 .greater-calendar .rbc-slot-selecting .rbc-event {
   cursor: inherit;
@@ -690,6 +691,11 @@
   font-size: 16px;
   cursor: pointer;
   width: 200px;
+  position: absolute;
+    left: 5%;
+    top: 50px;
+  margin-top: 4px;
+  
 }
 
 .last-button:hover {
@@ -710,4 +716,20 @@
   justify-content: center;
   
   width: 100vw;
+  max-width: 1366px;
+
+}
+
+.confirmation-text{
+  display: inline-block;
+  color: rgb(27, 126, 27);
+  text-align:center;
+  transition: 0.40s ease-in;
+}
+
+
+.confirmation-text2{
+  visibility: hidden;
+  
+  text-align:center;
 }

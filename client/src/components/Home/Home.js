@@ -24,13 +24,13 @@ export default class Home extends Component {
             <div className="main-logins">
             <div className="artist-logins">
             <div className="artist-logo"><img className="artist-logo" src="/img/design.png"></img></div>
-            <Link className="black-link" to="/loginArtist">Logeate como artista</Link>
+            <Link className="black-link" to="/loginArtist">Entra como artista</Link>
                 <Link className="black-link" to="/signupArtist">Registrate como artista</Link>
                 </div>
                 <div className="logins-separator"></div>
                 <div className="user-logins">
                 <div className="user-logo"><img className="user-logo" src="/img/team.png"></img></div>
-                <Link className="black-link" to="/login"> Logeate como cliente</Link>
+                <Link className="black-link" to="/login"> Entra como cliente</Link>
                 <Link className="black-link" to="/signup">Registrate como cliente</Link>
                 </div>
                 </div>
@@ -52,7 +52,7 @@ export default class Home extends Component {
                 Basada en calendarios públicos los clientes pueden ver la disponibilidad de sus artistas en tan solo dos clicks. 
                 </p>
                 <p className="main-paragraph">
-                Fácil cómodo y sencillo.</p>
+                Fácil, cómodo y sencillo.</p>
                 </div>
                 {main}
                 

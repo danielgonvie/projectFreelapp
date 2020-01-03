@@ -34,7 +34,8 @@
   flex-direction: column;
 }
 .input-general-description{
-  width: 700px;
+  width: 1312px;
+  height: 106px;
   
 }
 .edit-images{
@@ -60,10 +61,10 @@
 .just-videos{
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .edit-gallery{
-  margin-top: 40px;
+  margin-top: 15px;
 }
 .image-edit-gallery{
   display:flex;
@@ -76,7 +77,7 @@
   width: 710px;
 }
 .edit-song-description{
-  margin-top: 30px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   width: 710px;
@@ -87,6 +88,11 @@
   background: none;
   cursor: pointer;
   height: 35px;
+}
+.delete-image{
+  position:absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 .edit-video-only{
@@ -145,6 +151,7 @@
 .song-edit-gallery{
   display:flex;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 
@@ -154,4 +161,31 @@
   background: none;
   cursor: pointer;
   height: 35px;
+  
+}
+
+.confirmation-text3{
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  color: rgb(27, 126, 27);
+  text-align:center;
+  transition: 0.40s ease-in;
+}
+
+
+.confirmation-text4{
+  visibility: hidden;
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  text-align:center;
+}
+
+.separatrix{
+  margin: 5px 0px;
+  margin-left: -10px;
+  height: 1px;
+  background-color: grey;
+  width: 100%;
 }

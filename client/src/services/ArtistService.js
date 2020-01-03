@@ -22,6 +22,8 @@ class ArtistService {
     .catch(error => console.error(error))
   }
 
+  
+
   fetchCalendar = (id) => {
     return this.instance.get(`/calendar/${id}`)
     .then(res => Promise.resolve(res.data))

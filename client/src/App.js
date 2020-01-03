@@ -14,6 +14,7 @@ import Index from './components/Index/Index';
 import Navbar from './components/Navbar/Navbar';
 import EditCalendar from './components/EditCalendar/EditCalendar';
 import EditPortfolio from './components/EditPortfolio/EditPortfolio';
+import EditArtist from './components/EditArtist/EditArtist';
 import Footer from './components/Footer/Footer';
 import BadRoute from './components/BadRoute/BadRoute';
 
@@ -78,7 +79,7 @@ class App extends React.Component {
             <Route exact path="/login" render={(match) => <React.Fragment><Navbar {...match} user={user} ></Navbar><BadRoute></BadRoute></React.Fragment>} />  
             <Route exact path="/signup" render={(match) => <React.Fragment><Navbar {...match} user={user} ></Navbar><BadRoute></BadRoute></React.Fragment>} />
             <Route exact path="/signupArtist" render={(match) => <React.Fragment><Navbar {...match} user={user} ></Navbar><BadRoute></BadRoute></React.Fragment>} />
-            <Route exact path="/artists/edit/:id" render={(match) => <React.Fragment><Navbar {...match} user={user} ></Navbar><BadRoute></BadRoute></React.Fragment>}/>
+            <Route exact path="/artists/edit/:id" render={(match) => <React.Fragment><Navbar {...match} user={user} ></Navbar> <EditArtist {...match} user={user} /> </React.Fragment>}/>
             
           </Switch> }
           

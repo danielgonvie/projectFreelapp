@@ -22,36 +22,36 @@ export default class EditPortfolio extends Component {
       newVideo: null,
       newSong: null,
       description: null,
+      confirm: false,
     };
   }
 
   handleChange = e => {
     const { name, value } = e.target;
-    console.log(e.target.value);
     this.setState({
       ...this.state,
-      gallery: { ...this.state.gallery, [name]: value }
+      gallery: { ...this.state.gallery, [name]: value },
+      confirm: false,
     });
   };
 
   handleChangeDesc = e => {
     const { name, value } = e.target;
-    console.log(e.target.value);
-    this.setState({ ...this.state, [name]: value });
+    this.setState({ ...this.state, [name]: value , confirm: false,});
   };
 
   handleChangeNewImg = e => {
     const { value } = e.target;
-    this.setState({ ...this.state, newImg: value });
+    this.setState({ ...this.state, newImg: value , confirm: false,});
   };
 
   handleChangeNewVideo = e => {
     const { value } = e.target;
-    this.setState({ ...this.state, newVideo: value });
+    this.setState({ ...this.state, newVideo: value , confirm: false,});
   };
   handleChangeNewSong = e => {
     const { value } = e.target;
-    this.setState({ ...this.state, newSong: value });
+    this.setState({ ...this.state, newSong: value ,confirm: false,});
   };
 
 
@@ -61,19 +61,20 @@ export default class EditPortfolio extends Component {
     return (
       <React.Fragment>
        <input className="submit-button-edit" type="submit" value="Guardar" />
+       
         <div className="edit-description">
        
           <label>Editar la descripción general: </label>
-          <input
+          <textarea
           className="input-general-description"
             type="text"
             value={this.state.description}
             onChange={e => this.handleChangeDesc(e)}
             placeholder="Descripción general de lo que haces"
             name="description"
-          ></input>
+          ></textarea>
         </div>
-
+        <div className="separatrix"></div>
         <div className="edit-gallery">
         <div className="just-images">
           <div className="edit-img-description">
@@ -96,10 +97,9 @@ export default class EditPortfolio extends Component {
                     className="edit-img-only"
                     key={i}
                     src={image.original}
-                    onClick={() => this.deleteImg(image._id)}
                     alt="Imagen errónea. Click para borrar."
                   />
-                  
+                  <button  className="delete-image" onClick={() => this.deleteImg(image._id)}>Delete</button>
                 </div>
               ))}
 
@@ -117,6 +117,7 @@ export default class EditPortfolio extends Component {
             </div>
           </div>
           </div>
+          <div className="separatrix"></div>
                 <div className="just-videos">
           <div className="edit-video-description">
             <label>Editar la descripcion de los vídeos: </label>
@@ -159,6 +160,7 @@ export default class EditPortfolio extends Component {
             </div>
           </div>
           </div>
+          <div className="separatrix"></div>
 
           <div className="edit-song-description">
             <label>Editar la descripcion de las canciones: </label>
@@ -237,10 +239,10 @@ export default class EditPortfolio extends Component {
     
     const newState = this.state;
     const index = newState.gallery.videos.findIndex(a => a === src);
-    console.log("deleteando video")
+    
     if (index === -1) return;
     newState.gallery.videos.splice(index, 1);
-    console.log("video borrada")
+   
     this.setState(newState); // This will update the state and trigger a rerender of the components
   
 };
@@ -254,10 +256,10 @@ deleteSong = src => {
   
   const newState = this.state;
   const index = newState.gallery.songs.findIndex(a => a === src);
-  console.log("deleteando song")
+  
   if (index === -1) return;
   newState.gallery.songs.splice(index, 1);
-  console.log("song borrada")
+  
   this.setState(newState); // This will update the state and trigger a rerender of the components
 
 };
@@ -319,22 +321,34 @@ deleteSong = src => {
 
   savePortfolio = e => {
     e.preventDefault();
-    console.log(this.state.gallery);
+    
     this.artistService.updatePortfolio(
       this.state.portfolio._id,
       this.state.description,
       this.state.gallery
     );
+    this.setState({
+      ...this.state,
+      confirm: true,
+    })
   };
 
   render() {
-    console.log(this.state);
+    let confirmText = <React.Fragment></React.Fragment>;
+    if (this.state.confirm === true) {
+      confirmText = <h4 className="confirmation-text3">¡Cambios guardados con éxito!</h4>;
+    } else {
+      confirmText = <h4 className="confirmation-text4">Cambios guardados con éxito</h4>;
+    };
+
     return (
       <div className="edit-portfolio-div">
         <form onSubmit={this.savePortfolio}>
           {this.state.portfolio && this.displayPortfolio()}
           {!this.state.portfolio && <p>Loading portfolio...</p>}
+          
         </form>
+        {confirmText}
       </div>
     );
   }

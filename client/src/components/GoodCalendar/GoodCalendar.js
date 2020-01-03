@@ -15,7 +15,8 @@ export default class GoodCalendar extends Component {
     super(props);
     this.artistService = new ArtistService();
     this.state = {
-      events: this.props.calendar.events
+      events: this.props.calendar.events,
+      confirm: false
     };
 
   }
@@ -24,6 +25,7 @@ export default class GoodCalendar extends Component {
     const title = window.prompt('Nombre del nuevo evento')
     if (title)
       this.setState({
+        ...this.state,
         events: [
           ...this.state.events,
           {
@@ -32,6 +34,7 @@ export default class GoodCalendar extends Component {
             title,
           },
         ],
+        confirm: false,
       })
   }
 
@@ -43,7 +46,8 @@ export default class GoodCalendar extends Component {
         const events = [...prevState.events]
         const idx = events.indexOf(pEvent)
         events.splice(idx, 1);
-        return { events };
+        return { events, confirm: false };
+        
       });
     }
   }
@@ -66,7 +70,9 @@ export default class GoodCalendar extends Component {
     nextEvents.splice(idx, 1, updatedEvent)
 
     this.setState({
+      ...this.state,
       events: nextEvents,
+      confirm: false,
     })
 
   }
@@ -81,7 +87,9 @@ export default class GoodCalendar extends Component {
     })
 
     this.setState({
+      ...this.state,
       events: nextEvents,
+      confirm: false,
     })
 
     //alert(`${event.title} was resized to ${start}-${end}`)
@@ -89,20 +97,28 @@ export default class GoodCalendar extends Component {
 
   updateEvents = (e) =>{
     e.preventDefault()
-    console.log(this.state.events)
-    console.log(this.props.calendar._id)
     this.artistService.updateEvents( this.state.events, this.props.calendar._id)
+    this.setState({
+      ...this.state,
+      confirm: true,
+    })
   }
   
 
 
   render() {
-
+    let confirmText = <React.Fragment></React.Fragment>;
+    if (this.state.confirm === true) {
+      confirmText = <h4 className="confirmation-text">¡Cambios guardados con éxito!</h4>;
+    } else {
+      confirmText = <h4 className="confirmation-text2">Cambios guardados con éxito</h4>;
+    };
 
 
     return (
       <div className="last-div">
         <button className="last-button" onClick={(e) => this.updateEvents(e)}>Guardar cambios</button>
+        {confirmText}
         <DnDCalendar
           selectable
           defaultDate={moment().toDate()}
