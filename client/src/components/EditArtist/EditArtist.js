@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./EditArtist.css";
 import { Link } from "react-router-dom";
-import ArtistService from '../../services/ArtistService';
-
+import ArtistService from "../../services/ArtistService";
 
 export default class Artist extends Component {
   constructor(props) {
@@ -12,25 +11,26 @@ export default class Artist extends Component {
     this.state = {
       artist: null,
       picture: null,
-      toggleAlias:null,
-      alias:null,
-      name:null,
-      city:null,
-      country:null,
-      category:null,
-      subcategory:null,
-      availability:null,
-      contactEmail:null,
-      contactPhone:null,
+      toggleAlias: null,
+      alias: null,
+      name: null,
+      location:{
+      city: null,
+      country: null,
+      },
+      category: null,
+      subcategory: null,
+      availability: null,
+      contactEmail: null,
+      contactPhone: null,
       social: {
-        instagram:null,
-        other:null,
+        instagram: null,
+        other: null,
         soundcloud: null,
-        github:null
-},
+        github: null
+      },
 
-
-      confirm: false,
+      confirm: false
     };
   }
 
@@ -40,82 +40,91 @@ export default class Artist extends Component {
     }
   }
 
+  saveArtist = e => {
+    e.preventDefault();
+    
+    this.artistService.updateArtist(
+      this.state.artist.id,
+      this.state.toggleAlias,
+      this.state.name,
+      this.state.alias,
+      this.state.location,
+      this.state.category,
+      this.state.subcategory,
+      this.state.availability,
+      this.state.contactEmail,
+      this.state.contactPhone,
+      this.state.social,
+    );
+    this.setState({
+      ...this.state,
+      confirm: true,
+    })
+  };
+
   fetchArtist = () => {
     this.artistService.fetchOneArtist(this.props.match.params.id).then(
       artist => {
-       
-        let alias
-        let toggleAlias
-        let name
-        let city
-        let country
-        let category
-        let subcategory
-        let availability
-        let contactEmail
-        let contactPhone
-        let instagram
-        let other
-        let soundcloud
-        let github
+        let alias;
+        let toggleAlias;
+        let name;
+        let city;
+        let country;
+        let category;
+        let subcategory;
+        let availability;
+        let contactEmail;
+        let contactPhone;
+        let instagram;
+        let other;
+        let soundcloud;
+        let github;
 
-        artist.name
-          ? (name = artist.name)
-          : (name = null);
+        artist.name ? (name = artist.name) : (name = null);
 
-          artist.alias
-          ? (alias = artist.alias)
-          : (alias = null);
+        artist.alias ? (alias = artist.alias) : (alias = null);
 
-          artist.toggleAlias
+        artist.toggleAlias
           ? (toggleAlias = artist.toggleAlias)
           : (toggleAlias = null);
 
-          artist.location.city
-          ? (city = artist.location.city)
-          : (city = null);
+        artist.location.city ? (city = artist.location.city) : (city = null);
 
-          artist.location.country
+        artist.location.country
           ? (country = artist.location.country)
           : (country = null);
 
-          artist.category
-          ? (category = artist.category)
-          : (category = null);
+        artist.category ? (category = artist.category) : (category = null);
 
-          artist.subcategory
+        artist.subcategory
           ? (subcategory = artist.subcategory)
           : (subcategory = null);
 
-          artist.availability
+        artist.availability
           ? (availability = artist.availability)
           : (availability = null);
 
-          artist.contactEmail
+        artist.contactEmail
           ? (contactEmail = artist.contactEmail)
           : (contactEmail = null);
 
-          artist.contactPhone
+        artist.contactPhone
           ? (contactPhone = artist.contactPhone)
           : (contactPhone = null);
 
-          artist.instagram
+        artist.social.instagram
           ? (instagram = artist.social.instagram)
           : (instagram = null);
 
-          artist.soundcloud
+        artist.social.soundcloud
           ? (soundcloud = artist.social.soundcloud)
           : (soundcloud = null);
-     
-          artist.github
+
+        artist.social.github
           ? (github = artist.social.github)
           : (github = null);
- 
-          artist.other
-          ? (other = artist.social.other)
-          : (other = null);
 
-          
+        artist.social.other ? (other = artist.social.other) : (other = null);
 
         this.setState({
           ...this.state,
@@ -123,24 +132,22 @@ export default class Artist extends Component {
           alias,
           name,
           toggleAlias,
-          location:{
+          location: {
             city: city,
-            country: country,
+            country: country
           },
-          
+
           category,
           subcategory,
           availability,
           contactEmail,
           contactPhone,
-          social:{
+          social: {
             instagram: instagram,
-            other:other,
+            other: other,
             soundcloud: soundcloud,
-            github:github,
+            github: github
           }
-         
-          
         });
       },
       error => {
@@ -155,13 +162,22 @@ export default class Artist extends Component {
     this.setState({
       ...this.state,
       location: { ...this.state.location, [name]: value },
-      confirm: false,
+      confirm: false
+    });
+  };
+
+  handleChange2 = e => {
+    const { name, value } = e.target;
+    this.setState({
+      ...this.state,
+      social: { ...this.state.social, [name]: value },
+      confirm: false
     });
   };
 
   handleChangeDesc = e => {
     const { name, value } = e.target;
-    this.setState({ ...this.state, [name]: value , confirm: false,});
+    this.setState({ ...this.state, [name]: value, confirm: false });
   };
 
   displayProfile = () => {
@@ -169,175 +185,193 @@ export default class Artist extends Component {
 
     return (
       <React.Fragment>
-       <input className="submit-button-edit" type="submit" value="Guardar" />
-       
-        <div className="edit-artist-name">
-<div className="parameter">
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-</div>
-<div className="parameter">
+        <input className="submit-button-edit3" type="submit" value="Guardar" />
 
-<label>Alias: </label>
-          <input
-              type="text"
-              value={this.state.alias}
-              name="alias"
-              placeholder="Alias"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-</div>
-<div className="parameter">
-<label>Mostrar nombre/alias: </label>
-<select name="toggleAlias">
-  <option value="name">Nombre</option>
-  <option value="alias">Alias</option>
-  <option value="both" selected>Ambos</option>
-</select>
-</div>    
-<div className="parameter">      
-<label>Ciudad: </label>
-          <input
-              type="text"
-              value={this.state.location.city}
-              name="city"
-              placeholder="Ciudad"
-              onChange={this.handleChange}
-            ></input>
-</div>
-<div className="parameter">
-<label>Pais: </label>
-          <input
-              type="text"
-              value={this.state.location.country}
-              name="country"
-              placeholder="Pais"
-              onChange={this.handleChange}
-            ></input>
-</div>
-<div className="parameter">
-<label>Categoría: </label>
-<select name="category">
-  <option value="photo">Fotografía</option>
-  <option value="tattoo">Tattoo</option>
-  <option value="design">Diseño</option>
-  <option value="music">Música</option>
-</select>
-</div>
-<div className="parameter">
-<label>Sucategoría: </label>
-          <input
-              type="text"
-              value={this.state.subcategory}
-              name="subcategory"
-              placeholder="Subcategoría"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
+        <div className="edit-artist-name">
+          <div className="edit-column">
+            <div className="info-group">
+              <div className="parameter">
+                <label>Nombre: </label>
+                <input
+                  type="text"
+                  value={this.state.name}
+                  name="name"
+                  placeholder="Descripción de las imágenes"
+                  onChange={e => this.handleChangeDesc(e)}
+                ></input>
+              </div>
+              <div className="parameter">
+                <label>Alias: </label>
+                <input
+                  type="text"
+                  value={this.state.alias}
+                  name="alias"
+                  placeholder="Alias"
+                  onChange={e => this.handleChangeDesc(e)}
+                ></input>
+              </div>
+              <div className="parameter">
+                <label>Mostrar nombre/alias: </label>
+                <select name="toggleAlias">
+                  <option value="name">Nombre</option>
+                  <option value="alias">Alias</option>
+                  <option value="both" selected>
+                    Ambos
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div className="info-group">
+              <div className="parameter">
+                <label>Ciudad: </label>
+                <input
+                  type="text"
+                  value={this.state.location.city}
+                  name="city"
+                  placeholder="Ciudad"
+                  onChange={this.handleChange}
+                ></input>
+              </div>
+              <div className="parameter">
+                <label>Pais: </label>
+                <input
+                  type="text"
+                  value={this.state.location.country}
+                  name="country"
+                  placeholder="Pais"
+                  onChange={this.handleChange}
+                ></input>
+              </div>
+            </div>
+          </div>
+          <div className="vertical-separator"></div>
+          <div className="edit-column">
+            <div className="info-group">
+              <div className="parameter">
+                <label>Categoría: </label>
+                <select name="category">
+                  <option value="photo">Fotografía</option>
+                  <option value="tattoo">Tattoo</option>
+                  <option value="design">Diseño</option>
+                  <option value="music">Música</option>
+                </select>
+              </div>
+              <div className="parameter">
+                <label>Subcategoría: </label>
+                <input
+                  type="text"
+                  value={this.state.subcategory}
+                  name="subcategory"
+                  placeholder="Subcategoría"
+                  onChange={e => this.handleChangeDesc(e)}
+                ></input>
+              </div>
+            </div>
+
+            <div className="parameter">
+              <label>Disponibilidad: </label>
+              <select name="availability">
+                <option value="local">Local</option>
+                <option value="city">Ciudad</option>
+                <option value="100" selected>
+                  Alrededores
+                </option>
+                <option value="country" selected>
+                  Pais
+                </option>
+                <option value="worldwide" selected>
+                  Internacional
+                </option>
+              </select>
+            </div>
+            <div className="info-group">
+              <div className="parameter">
+                <label>Email público de contacto: </label>
+                <input
+                  type="text"
+                  value={this.state.contactEmail}
+                  name="contactEmail"
+                  placeholder="Email de contacto"
+                  onChange={e => this.handleChangeDesc(e)}
+                ></input>
+              </div>
+              <div className="parameter">
+                <label>Teléfono público de contacto: </label>
+                <input
+                  type="text"
+                  value={this.state.contactPhone}
+                  name="contactPhone"
+                  placeholder="Teléfono de contacto"
+                  onChange={e => this.handleChangeDesc(e)}
+                ></input>
+              </div>
+            </div>
+          </div>
+          <div className="vertical-separator"></div>
+          <div className="info-group">
+            <div className="parameter">
+              <label>Instagram: </label>
+              <input
+                type="text"
+                value={this.state.social.instagram}
+                name="instagram"
+                placeholder="Nombre de usuario en instagram"
+                onChange={e => this.handleChangeDesc2(e)}
+              ></input>
             </div>
             <div className="parameter">
-<label>Disponibilidad: </label>
-<select name="availability">
-  <option value="local">Local</option>
-  <option value="city">Ciudad</option>
-  <option value="100" selected>Alrededores</option>
-  <option value="country" selected>Pais</option>
-  <option value="worldwide" selected>Internacional</option>
-</select>
-</div>    
-<div className="parameter">
-
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-</div>
-
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-
-<label>Nombre: </label>
-          <input
-              type="text"
-              value={this.state.name}
-              name="name"
-              placeholder="Descripción de las imágenes"
-              onChange={e => this.handleChangeDesc(e)}
-            ></input>
-
-
-            
-</div>
-</React.Fragment>
-)
-}
-
+              <label>Github: </label>
+              <input
+                type="text"
+                value={this.state.social.github}
+                name="github"
+                placeholder="Nombre de usuario en github"
+                onChange={e => this.handleChangeDesc2(e)}
+              ></input>
+            </div>
+            <div className="parameter">
+              <label>Soundcloud: </label>
+              <input
+                type="text"
+                value={this.state.social.soundcloud}
+                name="soundcloud"
+                placeholder="Nombre de usuario en soundcloud"
+                onChange={e => this.handleChangeDesc2(e)}
+              ></input>
+            </div>
+            <div className="parameter">
+              <label>Página web: </label>
+              <input
+                type="text"
+                value={this.state.social.other}
+                name="other"
+                placeholder="Página web u otras páginas"
+                onChange={e => this.handleChangeDesc2(e)}
+              ></input>
+            </div>
+          </div>
+        </div>
+      </React.Fragment>
+    );
+  };
 
   render() {
     let confirmText = <React.Fragment></React.Fragment>;
     if (this.state.confirm === true) {
-      confirmText = <h4 className="confirmation-text3">¡Cambios guardados con éxito!</h4>;
+      confirmText = (
+        <h4 className="confirmation-text5">¡Cambios guardados con éxito!</h4>
+      );
     } else {
-      confirmText = <h4 className="confirmation-text4">Cambios guardados con éxito</h4>;
-    };
+      confirmText = (
+        <h4 className="confirmation-text6">Cambios guardados con éxito</h4>
+      );
+    }
 
     return (
       <div className="edit-artist-page">
         <form onSubmit={this.saveArtist}>
           {this.state.artist && this.displayProfile()}
           {!this.state.artist && <p>Loading profile...</p>}
-          
         </form>
         {confirmText}
       </div>

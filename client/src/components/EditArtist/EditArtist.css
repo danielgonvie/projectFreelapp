@@ -1,9 +1,70 @@
 .edit-artist-page{
   color: black;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 
 .edit-artist-name{
   display:flex;
-  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
   
+}
+
+.parameter{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.vertical-separator{
+  width: 1px;
+  background-color: gray;
+  height: 300px;
+
+}
+
+.submit-button-edit3{
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  bottom: 100px;
+  left: 100px;
+  cursor: pointer;
+}
+
+.submit-button-edit3:hover{
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  bottom: 100px;
+  left: 100px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.confirmation-text5{
+  position: absolute;
+  bottom: 150px;
+  left: 50px;
+  color: rgb(27, 126, 27);
+  text-align:center;
+  transition: 0.40s ease-in;
+}
+
+
+.confirmation-text6{
+  visibility: hidden;
+  position: absolute;
+  bottom: 150px;
+  left: 50px;
+  text-align:center;
 }

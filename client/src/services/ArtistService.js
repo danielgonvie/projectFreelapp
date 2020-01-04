@@ -42,6 +42,12 @@ class ArtistService {
     .catch(error => console.error(error))
   }
 
+  updateArtist = (id, toggleAlias, name, alias, location, category, subcategory, availability, contactEmail, contactPhone, social) => {
+    return this.instance.post(`/edit/artist/${id}`, {toggleAlias, name, alias, location, category, subcategory, availability, contactEmail, contactPhone, social})
+    .then(res=> Promise.resolve(res.data))
+    .catch(error => console.error(error))
+  }
+
   updateEvents = (events, id) => {
     return this.instance.post(`/edit/calendar/${id}`, events)
     .then(res => Promise.resolve(res.data))

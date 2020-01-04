@@ -67,6 +67,18 @@ router.post("/edit/portfolio/:id", (req, res, next) => {
     .catch(error => console.log(error));
 });
 
+router.post("/edit/artist/:id", (req, res, next) => {
+  const { id } = req.params;
+  let { toggleAlias, name, alias, location, category, subcategory, availability, contactEmail, contactPhone, social} = req.body;
+
+  Artist.findByIdAndUpdate({_id: id}, {toggleAlias: toggleAlias, name: name, alias: alias, location: location, category: category, subcategory: subcategory, availability: availability, contactEmail: contactEmail, contactPhone: contactPhone, social: social})
+    .then(artist => {
+      console.log("Se ha actualizado correctamente el artist");
+      res.status(200).json(artist);
+    })
+    .catch(error => console.log(error));
+});
+
 router.post("/delete/img/:id", (req, res, next) => {
   const { id } = req.params;
   let { i } = req.body;
