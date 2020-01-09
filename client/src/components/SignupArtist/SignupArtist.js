@@ -16,8 +16,8 @@ export default class SignUp extends Component {
     alias: "",
     toggleAlias: "",
     location: {
-      city: "",
-      country: ""
+      city: "lol",
+      country: "null",
     },
     category: "",
     subcategory: "",
@@ -36,10 +36,23 @@ export default class SignUp extends Component {
     const { name, value } = e.target;
     this.setState({ ...this.state, [name]: value });
   };
+
+  handleChange2 = e => {
+    const { name, value } = e.target;
+    this.setState({ ...this.state, location: {[name]: value }});
+  };
+
+  handleChange3 = e => {
+    const { name, value } = e.target;
+    this.setState({ ...this.state, social: {[name]: value }});
+  };
+
+
+
   handleSignUp = e => {
     e.preventDefault();
     const { history, setUser } = this.props;
-    this.authService.signup(this.state).then(
+    this.authService.signupArtist(this.state).then(
       user => {
         setUser(user);
         history.push("/");
@@ -66,14 +79,19 @@ export default class SignUp extends Component {
   render() {
     const { email, password, picture } = this.state;
     const name = this.state.name;
-    const alias =
-    const toggleAlias =
-    const city = 
-    
-
-
-
-
+    const alias = this.state.alias ;
+    const toggleAlias = this.state.toggleAlias ;
+    const city = this.state.location.city ;
+    const country = this.state.location.country ;
+    const category = this.state.category ;
+    const subcategory = this.state.subcategory ;
+    const availability = this.state.availability ;
+    const contactEmail = this.state.contactEmail ;
+    const contactPhone = this.state.contactPhone ;
+    const instagram = this.state.social.instagram ;
+    const other = this.state.social.other ;
+    const soundcloud = this.state.social.soundcloud ;
+    const github = this.state.social.github ;
 
 
     return (
@@ -81,11 +99,11 @@ export default class SignUp extends Component {
         <Link className="back-link bounce" to="/">
           <h1 className="absolute-arrow">⇠ Volver</h1>
         </Link>
-        <div className="signup-box">
+        {/* <div className="signup-box"> */}
           <h1 className="title">SignUp</h1>
           <form className="signup-fields" onSubmit={this.handleSignUp}>
             <label className="login-labels" htmlFor="email">
-              Email:{" "}
+              Email:
             </label>
             <input
               className="login-field"
@@ -96,7 +114,7 @@ export default class SignUp extends Component {
               onChange={this.handleChange}
             />
             <label className="login-labels" htmlFor="password">
-              Password:{" "}
+              Password:
             </label>
             <input
               className="login-field"
@@ -106,9 +124,150 @@ export default class SignUp extends Component {
               required
               onChange={this.handleChange}
             />
+             <label className="login-labels" htmlFor="name">
+              name:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={name}
+              name="name"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="alias">
+              Alias:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={alias}
+              name="alias"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="toggleAlias">
+              Mostrar nombre o alias:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={toggleAlias}
+              name="toggleAlias"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="city">
+              Ciudad:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={city}
+              name="city"
+              onChange={this.handleChange2}
+            />
+            <label className="login-labels" htmlFor="country">
+              País:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={country}
+              name="country"
+              onChange={this.handleChange2}
+            />
+            <label className="login-labels" htmlFor="category">
+              category:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={category}
+              name="category"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="subcategory">
+              subcategory:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={subcategory}
+              name="subcategory"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="availability">
+              availability:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={availability}
+              name="availability"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="contactEmail">
+              contactEmail:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={contactEmail}
+              name="contactEmail"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="contactPhone">
+              contactPhone:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={contactPhone}
+              name="contactPhone"
+              onChange={this.handleChange}
+            />
+            <label className="login-labels" htmlFor="instagram">
+              instagram:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={instagram}
+              name="instagram"
+              onChange={this.handleChange3}
+            />
+                        <label className="login-labels" htmlFor="soundcloud">
+              soundcloud:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={soundcloud}
+              name="soundcloud"
+              onChange={this.handleChange3}
+            />
+                        <label className="login-labels" htmlFor="github">
+              github:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={github}
+              name="github"
+              onChange={this.handleChange3}
+            />
+                        <label className="login-labels" htmlFor="other">
+              other:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={other}
+              name="other"
+              onChange={this.handleChange3}
+            />
 
-            <div class="upload-btn-wrapper">
-              <button class="btn">Upload a file</button>
+
+            <div className="upload-btn-wrapper">
+              <button className="btn">Upload a file</button>
               <input
                 className="signup-upload"
                 type="file"
@@ -123,7 +282,7 @@ export default class SignUp extends Component {
             />
           </form>
         </div>
-      </div>
+      /* </div> */
     );
   }
 }

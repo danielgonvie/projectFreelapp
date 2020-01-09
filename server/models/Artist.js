@@ -24,13 +24,13 @@ const artistSchema = new Schema(
       { type: Schema.Types.ObjectId, ref: "Artist" }
     ],
     location: {
-      city: { type: String, required: true },
-      country: { type: String, required: true }
+      city: { type: String},
+      country: { type: String}
     },
     category: {
       type: String,
-      enum: ["photo", "tattoo", "design", "music"],
-      required: true
+      enum: ["photo", "tattoo", "design", "music"]
+      
     },
     subcategory: { type: String },
     portfolio: { type: Schema.Types.ObjectId, ref: "Portfolio" },
