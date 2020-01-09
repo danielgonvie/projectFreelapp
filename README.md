@@ -60,3 +60,5 @@ The page was desployed on Heroku:
 - I had 2 weeks to do this project, but I had to restart from zero after the first week passed because I wasted too much time in a first calendar that finnally I couldnt use.
 - I would like to add a chat or something like that to establish communication via web between the artist and the user.
 - Also would like to add a favourites artist list for each user.
+
+![alt text](https://i.ibb.co/NFYKr0d/Selecci-n-019.png)
