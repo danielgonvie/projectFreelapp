@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import LoginArtist from './components/LoginArtist/LoginArtist';
 
 import SignUp from './components/Signup/Signup';
+import SignupArtist from './components/SignupArtist/SignupArtist';
 import AuthService from './services/AuthService';
 
 import Prueba from './components/Prueba/Prueba.js';
@@ -91,7 +92,7 @@ class App extends React.Component {
             <Route exact path="/artists"  render={(match) => <React.Fragment> <Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/> 
             <Route exact path="/prueba"  render={(match) => <React.Fragment> <Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/> 
             <Route exact path="/artists/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/>
-            <Route exact path="/signupArtist" render={(match) => <React.Fragment><Navbar {...match} user={user} ></Navbar><BadRoute></BadRoute></React.Fragment>} />
+            <Route exact path="/signupArtist" render={(match) => <React.Fragment><SignupArtist {...match} setUser={this.setUser} ></SignupArtist></React.Fragment>} />
             <Route exact path="/calendar/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/>
             <Route exact path="/portfolio/:id" render={(match) => <React.Fragment><Navbar {...match} user={user}></Navbar><BadRoute></BadRoute></React.Fragment>}/>
           </Switch> }
