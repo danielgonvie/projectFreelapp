@@ -14,6 +14,12 @@ class AuthService {
     .catch(error => console.error(error))
   }
 
+  signupArtist = (user) => {
+    return this.instance.post('/signup/artist/true', user)
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
+  }
+
   login = (user) => {
     return this.instance.post('/login', user)
     .then(res => Promise.resolve(res.data))
