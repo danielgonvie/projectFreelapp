@@ -30,6 +30,8 @@ La página ha sido desplegada en Heroku:
 - Me encantaría añadir un chat o algo similar para establecer comunicación vía web entre artista y usuario.
 - También quiero añadir una sección de artistas favoritos para cada usuario.
 
+![alt text](https://i.ibb.co/Dp1GHrz/Selecci-n-017.png)
+
 *(Now in English)*
 # FreelApp 🇬🇧
 
