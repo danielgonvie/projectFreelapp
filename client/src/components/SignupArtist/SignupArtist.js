@@ -14,14 +14,14 @@ export default class SignUp extends Component {
     picture: "",
     name: "",
     alias: "",
-    toggleAlias: "",
+    toggleAlias: "both",
     location: {
       city: "",
       country: "",
     },
-    category: "",
+    category: "photo",
     subcategory: "",
-    availability: "",
+    availability: "local",
     contactEmail: "",
     contactPhone: "",
     social: {
@@ -29,7 +29,8 @@ export default class SignUp extends Component {
       other: "",
       soundcloud: "",
       github: ""
-    }
+    },
+    
   };
 
   handleChange = e => {
@@ -97,7 +98,6 @@ export default class SignUp extends Component {
     const soundcloud = this.state.social.soundcloud ;
     const github = this.state.social.github ;
 
-
     return (
       <div className="signup-artist-page">
         <Link className="back-link bounce" to="/">
@@ -106,6 +106,7 @@ export default class SignUp extends Component {
         {/* <div className="signup-box"> */}
           <h1 className="title">SignUp</h1>
           <form className="signup-fields" onSubmit={this.handleSignUp}>
+          <div className="diapositive">
             <label className="login-labels" htmlFor="email">
               Email:
             </label>
@@ -128,6 +129,17 @@ export default class SignUp extends Component {
               required
               onChange={this.handleChange}
             />
+            <div className="upload-btn-wrapper">
+              <button className="btn">Subir imagen</button>
+              <input
+                className="signup-upload"
+                type="file"
+                name="picture"
+                onChange={this.handleUpload}
+              />
+            </div>
+            </div>
+<div className="diapositive">
              <label className="login-labels" htmlFor="name">
               name:
             </label>
@@ -158,26 +170,8 @@ export default class SignUp extends Component {
               name="toggleAlias"
               onChange={this.handleChange}
             />
-            <label className="login-labels" htmlFor="city">
-              Ciudad:
-            </label>
-            <input
-              className="login-field"
-              type="text"
-              value={city}
-              name="city"
-              onChange={this.handleChange2}
-            />
-            <label className="login-labels" htmlFor="country">
-              País:
-            </label>
-            <input
-              className="login-field"
-              type="text"
-              value={country}
-              name="country"
-              onChange={this.handleChange2}
-            />
+            </div>
+            <div className="diapositive">
             <label className="login-labels" htmlFor="category">
               category:
             </label>
@@ -198,6 +192,28 @@ export default class SignUp extends Component {
               name="subcategory"
               onChange={this.handleChange}
             />
+</div>
+<div className="diapositive">
+            <label className="login-labels" htmlFor="city">
+              Ciudad:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={city}
+              name="city"
+              onChange={this.handleChange2}
+            />
+            <label className="login-labels" htmlFor="country">
+              País:
+            </label>
+            <input
+              className="login-field"
+              type="text"
+              value={country}
+              name="country"
+              onChange={this.handleChange2}
+            />
             <label className="login-labels" htmlFor="availability">
               availability:
             </label>
@@ -208,6 +224,8 @@ export default class SignUp extends Component {
               name="availability"
               onChange={this.handleChange}
             />
+            </div>
+            <div className="diapositive">
             <label className="login-labels" htmlFor="contactEmail">
               contactEmail:
             </label>
@@ -268,17 +286,9 @@ export default class SignUp extends Component {
               name="other"
               onChange={this.handleChange3}
             />
+</div>
 
-
-            <div className="upload-btn-wrapper">
-              <button className="btn">Upload a file</button>
-              <input
-                className="signup-upload"
-                type="file"
-                name="picture"
-                onChange={this.handleUpload}
-              />
-            </div>
+            
             <input
               className="signup-button"
               type="submit"
