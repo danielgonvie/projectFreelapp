@@ -63,8 +63,8 @@ export default class SignUp extends Component {
           <label className="login-labels" htmlFor="password">Password: </label>
           <input className="login-field" type="password" value={password} name="password" required onChange={this.handleChange}/>
           
-          <div class="upload-btn-wrapper">
-         <button class="btn">Upload a file</button>
+          <div className="upload-btn-wrapper">
+         <button className="btn">Upload a file</button>
            <input className="signup-upload" type="file" name="picture" onChange={this.handleUpload} />
         </div>
           <input className="signup-button" type="submit" value="Create account"/>

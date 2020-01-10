@@ -172,15 +172,26 @@ router.post('/signup/artist/:true', (req, res, next) => {
     contactEmail: contactEmail,
     contactPhone: contactPhone,
     social: social,
-    calendar: newCalendar,
-    portfolio: newPortfolio,
+    calendar: null,
+    portfolio: null,
     });
 
-    newUser.save(err => {
-      if (err) {
-        res.status(400).json({ message: 'Ups! Algo ha ido mal :(' });
-        return;
-      }
+    let calendarId = null
+
+    newCalendar.save().then(calendar => {
+      calendarId = calendar._id
+      return newPortfolio.save()
+    }).then(portfolio => {
+      newUser.calendar=calendarId;
+      newUser.portfolio = portfolio._id;
+      newUser.save(err => {
+        if (err) {
+          res.status(400).json({ message: 'Ups! Algo ha ido mal :(' });
+          return;
+        }
+    })
+
+    
 
       // Automatically log in user after sign up
       // .login() here is actually predefined passport method

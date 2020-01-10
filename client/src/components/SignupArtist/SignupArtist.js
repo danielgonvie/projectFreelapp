@@ -16,8 +16,8 @@ export default class SignUp extends Component {
     alias: "",
     toggleAlias: "",
     location: {
-      city: "lol",
-      country: "null",
+      city: "",
+      country: "",
     },
     category: "",
     subcategory: "",
@@ -39,12 +39,16 @@ export default class SignUp extends Component {
 
   handleChange2 = e => {
     const { name, value } = e.target;
-    this.setState({ ...this.state, location: {[name]: value }});
+    let location = {...this.state.location}
+    location[name]= value;
+    this.setState({ ...this.state, location});
   };
 
   handleChange3 = e => {
     const { name, value } = e.target;
-    this.setState({ ...this.state, social: {[name]: value }});
+    let social = {...this.state.social}
+    social[name]= value;
+    this.setState({ ...this.state, social});
   };
 
 
