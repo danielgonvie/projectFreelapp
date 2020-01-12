@@ -163,33 +163,29 @@ export default class SignUp extends Component {
             <label className="login-labels" htmlFor="toggleAlias">
               Mostrar nombre o alias:
             </label>
-            <input
-              className="login-field"
-              type="text"
-              value={toggleAlias}
-              name="toggleAlias"
-              onChange={this.handleChange}
-            />
+            <input type="radio" name="toggleAlias" value="name" onChange={this.handleChange} /> Nombre
+  <input type="radio" name="toggleAlias" value="alias" onChange={this.handleChange}/> Alias
+  <input type="radio" name="toggleAlias" value="both" onChange={this.handleChange}/> Ambos
+
             </div>
             <div className="diapositive">
             <label className="login-labels" htmlFor="category">
-              category:
+              Categoría:
             </label>
-            <input
-              className="login-field"
-              type="text"
-              value={category}
-              name="category"
-              onChange={this.handleChange}
-            />
+            <input type="radio" name="category" value="photo" onChange={this.handleChange} /> Foto
+  <input type="radio" name="category" value="tattoo" onChange={this.handleChange}/> Tattoo
+  <input type="radio" name="category" value="design" onChange={this.handleChange}/> Diseño
+  <input type="radio" name="category" value="music" onChange={this.handleChange}/> Música
+
             <label className="login-labels" htmlFor="subcategory">
-              subcategory:
+              Subcategoría:
             </label>
             <input
               className="login-field"
               type="text"
               value={subcategory}
               name="subcategory"
+              placeholder="En qué te especializas"
               onChange={this.handleChange}
             />
 </div>
@@ -215,15 +211,14 @@ export default class SignUp extends Component {
               onChange={this.handleChange2}
             />
             <label className="login-labels" htmlFor="availability">
-              availability:
+              Disponibilidad:
             </label>
-            <input
-              className="login-field"
-              type="text"
-              value={availability}
-              name="availability"
-              onChange={this.handleChange}
-            />
+            <input type="radio" name="availability" value="local" onChange={this.handleChange} /> Local
+  <input type="radio" name="availability" value="city" onChange={this.handleChange}/> Ciudad
+  <input type="radio" name="availability" value="100" onChange={this.handleChange}/> Alrededores
+  <input type="radio" name="availability" value="country" onChange={this.handleChange}/> Nacional
+  <input type="radio" name="availability" value="worldwide" onChange={this.handleChange}/> Mundial
+           
             </div>
             <div className="diapositive">
             <label className="login-labels" htmlFor="contactEmail">
