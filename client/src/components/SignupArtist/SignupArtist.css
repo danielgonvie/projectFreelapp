@@ -61,7 +61,8 @@
   right: 15px;
   margin: 10px;
   margin-bottom: 30px;
-  width: 150px;
+  width: 200px;
+  height: 100px;
   background-color: black;
   border: none;
   color: white;
@@ -73,25 +74,12 @@
   font-size: 16px;
 }
 
-.signup-button:hover {
-  margin: 10px;
-  margin-bottom: 30px;
-  width: 150px;
-  background-color: white;
-  border: none;
-  color: black;
-  padding: 5px 0px;
-  border: 1px solid black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
+
 
 .diapositive {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .signup-fields2 {
@@ -99,13 +87,17 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  width: 100vw;
+  width: 100%;
 }
 
 .signup-button2:hover {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   margin: 10px;
   margin-bottom: 30px;
-  width: 150px;
+  width: 200px;
+  height: 100px;
   background-color: white;
   border: none;
   color: black;
@@ -151,6 +143,7 @@
 .toggleAlias-selected{
   display: flex;
   flex-direction:column;
+  justify-content: flex-start;
 }
 
 .logo-img2 {
@@ -184,9 +177,10 @@
   position:absolute;
   left: 0px;
   z-index: 1;
-  
-  
+  cursor: pointer;
 }
+
+
 .selected-category::-webkit-color-swatch {
   border: none;
   border-radius: 10px;
@@ -198,4 +192,20 @@
   border-radius: 10px;
   padding: 0;
   z-index: 1;
+}
+
+.social-signup-img{
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+}
+
+.social-signup{
+  display:flex;
+  align-items: center;
+}
+
+.signup-labels{
+  margin:0;
+  padding:0px;
 }

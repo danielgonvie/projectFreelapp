@@ -17,11 +17,11 @@ export default class SignUp extends Component {
     toggleAlias: "both",
     location: {
       city: "",
-      country: "",
+      country: ""
     },
     category: "photo",
     subcategory: "",
-    availability: "local",
+    availability: "0",
     contactEmail: "",
     contactPhone: "",
     social: {
@@ -29,8 +29,7 @@ export default class SignUp extends Component {
       other: "",
       soundcloud: "",
       github: ""
-    },
-    
+    }
   };
 
   handleChange = e => {
@@ -40,19 +39,17 @@ export default class SignUp extends Component {
 
   handleChange2 = e => {
     const { name, value } = e.target;
-    let location = {...this.state.location}
-    location[name]= value;
-    this.setState({ ...this.state, location});
+    let location = { ...this.state.location };
+    location[name] = value;
+    this.setState({ ...this.state, location });
   };
 
   handleChange3 = e => {
     const { name, value } = e.target;
-    let social = {...this.state.social}
-    social[name]= value;
-    this.setState({ ...this.state, social});
+    let social = { ...this.state.social };
+    social[name] = value;
+    this.setState({ ...this.state, social });
   };
-
-
 
   handleSignUp = e => {
     e.preventDefault();
@@ -84,127 +81,358 @@ export default class SignUp extends Component {
   render() {
     const { email, password, picture } = this.state;
     const name = this.state.name;
-    const alias = this.state.alias ;
-    const toggleAlias = this.state.toggleAlias ;
-    const city = this.state.location.city ;
-    const country = this.state.location.country ;
-    const category = this.state.category ;
-    const subcategory = this.state.subcategory ;
-    const availability = this.state.availability ;
-    const contactEmail = this.state.contactEmail ;
-    const contactPhone = this.state.contactPhone ;
-    const instagram = this.state.social.instagram ;
-    const other = this.state.social.other ;
-    const soundcloud = this.state.social.soundcloud ;
-    const github = this.state.social.github ;
+    const alias = this.state.alias;
+    const toggleAlias = this.state.toggleAlias;
+    const city = this.state.location.city;
+    const country = this.state.location.country;
+    const category = this.state.category;
+    const subcategory = this.state.subcategory;
+    const availability = this.state.availability;
+    const contactEmail = this.state.contactEmail;
+    const contactPhone = this.state.contactPhone;
+    const instagram = this.state.social.instagram;
+    const other = this.state.social.other;
+    const soundcloud = this.state.social.soundcloud;
+    const github = this.state.social.github;
 
-    let categoryDisplay = <React.Fragment>
-      <div className="category-container">
-            <div className="category-unit">
-            <input type="radio" className="selected-category" name="category" value="photo" onChange={this.handleChange} /> 
-            <img className="logo-img2" alt="Missing smthing" src="/img/camera.png"></img>
+    let showName 
+    if (this.state.name !== "" && this.state.name !== ""){
+      showName = this.state.name
+    } else {showName = "Nombre"}
+
+    let showAlias 
+    if (this.state.alias !== "" && this.state.alias !== ""){
+      showAlias = this.state.alias
+    } else {showAlias = "Alias"}
+
+    let categoryDisplay = (
+      <React.Fragment>
+        <div className="category-container">
+          <div className="category-unit">
+            <input
+              type="radio"
+              className="selected-category"
+              name="category"
+              value="photo"
+              onChange={this.handleChange}
+            />
+            <img
+              className="logo-img2"
+              alt="Missing smthing"
+              src="/img/camera.png"
+            ></img>
+          </div>
+          <div className="category-unit">
+            <input
+              type="radio"
+              className="selected-category"
+              name="category"
+              value="tattoo"
+              onChange={this.handleChange}
+            />
+            <img
+              className="logo-img2"
+              alt="Missing smthing"
+              src="/img/tattoo-machine.png"
+            ></img>
+          </div>
+          <div className="category-unit">
+            <input
+              type="radio"
+              className="selected-category"
+              name="category"
+              value="design"
+              onChange={this.handleChange}
+            />
+            <img
+              className="logo-img2"
+              alt="Missing smthing"
+              src="/img/creativity.png"
+            ></img>
+          </div>
+          <div className="category-unit">
+            <input
+              type="radio"
+              className="selected-category"
+              name="category"
+              value="music"
+              onChange={this.handleChange}
+            />
+            <img
+              className="logo-img2"
+              alt="Missing smthing"
+              src="/img/musical-note.png"
+            ></img>
+          </div>
+        </div>
+      </React.Fragment>
+    );
+    if (this.state.category === "photo") {
+      categoryDisplay = (
+        <React.Fragment>
+          <div className="category-container">
+            <div className="category-unit2">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="photo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/camera.png"
+              ></img>
             </div>
             <div className="category-unit">
-            <input type="radio" className="selected-category" name="category" value="tattoo" onChange={this.handleChange}/> 
-            <img className="logo-img2" alt="Missing smthing" src="/img/tattoo-machine.png"></img>
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="tattoo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/tattoo-machine.png"
+              ></img>
             </div>
             <div className="category-unit">
-  <input type="radio" className="selected-category" name="category" value="design" onChange={this.handleChange}/> 
-  <img className="logo-img2" alt="Missing smthing" src="/img/creativity.png"></img> 
-  </div>
-  <div className="category-unit">
-  <input type="radio" className="selected-category" name="category" value="music" onChange={this.handleChange}/> 
-  <img className="logo-img2" alt="Missing smthing" src="/img/musical-note.png"></img>
-  </div>
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="design"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/creativity.png"
+              ></img>
             </div>
-    </React.Fragment>
-  if (this.state.category === "photo") {
-    categoryDisplay = <React.Fragment>
-    <div className="category-container">
-          <div className="category-unit2">
-          <input type="radio" className="selected-category" name="category" value="photo" onChange={this.handleChange} /> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/camera.png"></img>
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="music"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img3"
+                alt="Missing smthing"
+                src="/img/musical-note.png"
+              ></img>
+            </div>
           </div>
-          <div className="category-unit">
-          <input type="radio" className="selected-category" name="category" value="tattoo" onChange={this.handleChange}/> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/tattoo-machine.png"></img>
+        </React.Fragment>
+      );
+    } else if (this.state.category === "tattoo") {
+      categoryDisplay = (
+        <React.Fragment>
+          <div className="category-container">
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="photo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/camera.png"
+              ></img>
+            </div>
+            <div className="category-unit2">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="tattoo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/tattoo-machine.png"
+              ></img>
+            </div>
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="design"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/creativity.png"
+              ></img>
+            </div>
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="music"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img3"
+                alt="Missing smthing"
+                src="/img/musical-note.png"
+              ></img>
+            </div>
           </div>
-          <div className="category-unit">
-<input type="radio" className="selected-category" name="category" value="design" onChange={this.handleChange}/> 
-<img className="logo-img2" alt="Missing smthing" src="/img/creativity.png"></img> 
-</div>
-<div className="category-unit">
-<input type="radio" className="selected-category" name="category" value="music" onChange={this.handleChange}/> 
-<img className="logo-img3" alt="Missing smthing" src="/img/musical-note.png"></img>
-</div>
+        </React.Fragment>
+      );
+    } else if (this.state.category === "design") {
+      categoryDisplay = (
+        <React.Fragment>
+          <div className="category-container">
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="photo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/camera.png"
+              ></img>
+            </div>
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="tattoo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/tattoo-machine.png"
+              ></img>
+            </div>
+            <div className="category-unit2">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="design"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/creativity.png"
+              ></img>
+            </div>
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="music"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img3"
+                alt="Missing smthing"
+                src="/img/musical-note.png"
+              ></img>
+            </div>
           </div>
-  </React.Fragment>
-  } else if (this.state.category === "tattoo") {
-    categoryDisplay = <React.Fragment>
-    <div className="category-container">
-          <div className="category-unit">
-          <input type="radio" className="selected-category" name="category" value="photo" onChange={this.handleChange} /> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/camera.png"></img>
+        </React.Fragment>
+      );
+    } else if (this.state.category === "music") {
+      categoryDisplay = (
+        <React.Fragment>
+          <div className="category-container">
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="photo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/camera.png"
+              ></img>
+            </div>
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="tattoo"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/tattoo-machine.png"
+              ></img>
+            </div>
+            <div className="category-unit">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="design"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img2"
+                alt="Missing smthing"
+                src="/img/creativity.png"
+              ></img>
+            </div>
+            <div className="category-unit2">
+              <input
+                type="radio"
+                className="selected-category"
+                name="category"
+                value="music"
+                onChange={this.handleChange}
+              />
+              <img
+                className="logo-img3"
+                alt="Missing smthing"
+                src="/img/musical-note.png"
+              ></img>
+            </div>
           </div>
-          <div className="category-unit2">
-          <input type="radio" className="selected-category" name="category" value="tattoo" onChange={this.handleChange}/> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/tattoo-machine.png"></img>
-          </div>
-          <div className="category-unit">
-<input type="radio" className="selected-category" name="category" value="design" onChange={this.handleChange}/> 
-<img className="logo-img2" alt="Missing smthing" src="/img/creativity.png"></img> 
-</div>
-<div className="category-unit">
-<input type="radio" className="selected-category" name="category" value="music" onChange={this.handleChange}/> 
-<img className="logo-img3" alt="Missing smthing" src="/img/musical-note.png"></img>
-</div>
-          </div>
-  </React.Fragment>
-  } else if (this.state.category === "design") {
-    categoryDisplay = <React.Fragment>
-    <div className="category-container">
-          <div className="category-unit">
-          <input type="radio" className="selected-category" name="category" value="photo" onChange={this.handleChange} /> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/camera.png"></img>
-          </div>
-          <div className="category-unit">
-          <input type="radio" className="selected-category" name="category" value="tattoo" onChange={this.handleChange}/> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/tattoo-machine.png"></img>
-          </div>
-          <div className="category-unit2">
-<input type="radio" className="selected-category" name="category" value="design" onChange={this.handleChange}/> 
-<img className="logo-img2" alt="Missing smthing" src="/img/creativity.png"></img> 
-</div>
-<div className="category-unit">
-<input type="radio" className="selected-category" name="category" value="music" onChange={this.handleChange}/> 
-<img className="logo-img3" alt="Missing smthing" src="/img/musical-note.png"></img>
-</div>
-          </div>
-  </React.Fragment>
-  } else if (this.state.category === "music") {
-    categoryDisplay = <React.Fragment>
-    <div className="category-container">
-          <div className="category-unit">
-          <input type="radio" className="selected-category" name="category" value="photo" onChange={this.handleChange} /> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/camera.png"></img>
-          </div>
-          <div className="category-unit">
-          <input type="radio" className="selected-category" name="category" value="tattoo" onChange={this.handleChange}/> 
-          <img className="logo-img2" alt="Missing smthing" src="/img/tattoo-machine.png"></img>
-          </div>
-          <div className="category-unit">
-<input type="radio" className="selected-category" name="category" value="design" onChange={this.handleChange}/> 
-<img className="logo-img2" alt="Missing smthing" src="/img/creativity.png"></img> 
-</div>
-<div className="category-unit2">
-<input type="radio" className="selected-category" name="category" value="music" onChange={this.handleChange}/> 
-<img className="logo-img3" alt="Missing smthing" src="/img/musical-note.png"></img>
-</div>
-          </div>
-  </React.Fragment>
-  }
+        </React.Fragment>
+      );
+    }
 
-
+    let availabilityDisplay = <React.Fragment></React.Fragment>;
+    if (this.state.availability === "0") {
+      availabilityDisplay = "Local";
+    } else if (this.state.availability === "1") {
+      availabilityDisplay = "Ciudad";
+    } else if (this.state.availability === "2") {
+      availabilityDisplay = "Alrededores";
+    } else if (this.state.availability === "3") {
+      availabilityDisplay = "País";
+    } else if (this.state.availability === "4") {
+      availabilityDisplay = "Mundial";
+    }
 
     return (
       <div className="signup-artist-page">
@@ -212,11 +440,11 @@ export default class SignUp extends Component {
           <h1 className="absolute-arrow">⇠ Volver</h1>
         </Link>
         {/* <div className="signup-box"> */}
-          <h1 className="title">SignUp</h1>
-          <form className="signup-fields2" onSubmit={this.handleSignUp}>
+        <h1 className="title">SignUp</h1>
+        <form className="signup-fields2" onSubmit={this.handleSignUp}>
           <div className="diapositive">
             <label className="login-labels" htmlFor="email">
-              Email:
+            <h3 className="signup-labels">Email</h3>
             </label>
             <input
               className="login-field"
@@ -228,7 +456,7 @@ export default class SignUp extends Component {
               placeholder="Correo para entrar"
             />
             <label className="login-labels" htmlFor="password">
-              Password:
+            <h3 className="signup-labels">Password</h3>
             </label>
             <input
               className="login-field"
@@ -245,14 +473,13 @@ export default class SignUp extends Component {
                 className="signup-upload"
                 type="file"
                 name="picture"
-                
                 onChange={this.handleUpload}
               />
             </div>
-            </div>
-<div className="diapositive">
-             <label className="login-labels" htmlFor="name">
-              Nombre:
+          </div>
+          <div className="diapositive">
+            <label className="login-labels" htmlFor="name">
+            <h3 className="signup-labels">Nombre</h3>
             </label>
             <input
               className="login-field"
@@ -263,7 +490,7 @@ export default class SignUp extends Component {
               onChange={this.handleChange}
             />
             <label className="login-labels" htmlFor="alias">
-              Alias:
+            <h3 className="signup-labels">Alias</h3>
             </label>
             <input
               className="login-field"
@@ -274,32 +501,48 @@ export default class SignUp extends Component {
               onChange={this.handleChange}
             />
             <label className="login-labels" htmlFor="toggleAlias">
-              Mostrar nombre o alias:
+            <h3 className="signup-labels">Mostrar nombre o alias</h3>
             </label>
             <div className="toggleAlias-selected">
-            <div>
-            <input type="radio" name="toggleAlias" value="name" onChange={this.handleChange} /> {name}
-            </div>
-            <div>
-            <input type="radio" name="toggleAlias" value="alias" onChange={this.handleChange}/> {alias}
-            </div>
-            <div>
-            <input type="radio" name="toggleAlias" value="both" onChange={this.handleChange}/> {name}, {alias}
-            </div>
-            </div>
-            </div>
-            <div className="diapositive-category">
-            <label className="login-labels" htmlFor="category">
-              Categoría:
-            </label>
             
+              <div>
+                <input
+                  type="radio"
+                  name="toggleAlias"
+                  value="name"
+                  onChange={this.handleChange}
+                />
+                {showName}
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="toggleAlias"
+                  value="alias"
+                  onChange={this.handleChange}
+                />
+                {showAlias}
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="toggleAlias"
+                  value="both"
+                  onChange={this.handleChange}
+                />
+                {showName}, {showAlias}
+              </div>
+            </div>
+          </div>
+          <div className="diapositive-category">
+            <label className="login-labels" htmlFor="category">
+            <h3 className="signup-labels">Categoría</h3>
+            </label>
+
             {categoryDisplay}
 
-
-
-
             <label className="login-labels" htmlFor="subcategory">
-              Subcategoría:
+            <h3 className="signup-labels">Subcategoría</h3>
             </label>
             <input
               className="login-field"
@@ -309,10 +552,10 @@ export default class SignUp extends Component {
               placeholder="Especialización"
               onChange={this.handleChange}
             />
-</div>
-<div className="diapositive">
+          </div>
+          <div className="diapositive">
             <label className="login-labels" htmlFor="city">
-              Ciudad:
+            <h3 className="signup-labels">Ciudad</h3>
             </label>
             <input
               className="login-field"
@@ -323,7 +566,7 @@ export default class SignUp extends Component {
               onChange={this.handleChange2}
             />
             <label className="login-labels" htmlFor="country">
-              País:
+            <h3 className="signup-labels">País</h3>
             </label>
             <input
               className="login-field"
@@ -334,19 +577,30 @@ export default class SignUp extends Component {
               onChange={this.handleChange2}
             />
             <label className="login-labels" htmlFor="availability">
-              Disponibilidad:
+            <h3 className="signup-labels">Disponibilidad</h3>
             </label>
-            <input type="radio" name="availability" value="local" onChange={this.handleChange} /> Local
-  <input type="radio" name="availability" value="city" onChange={this.handleChange}/> Ciudad
-  <input type="radio" name="availability" value="100" onChange={this.handleChange}/> Alrededores
-  <input type="radio" name="availability" value="country" onChange={this.handleChange}/> Nacional
-  <input type="radio" name="availability" value="worldwide" onChange={this.handleChange}/> Mundial
-           
+            <div>
+            <img className="social-signup-img" src="/img/store.png" />
+            <input
+              type="range"
+              name="availability"
+              value={availability}
+              min="0"
+              max="4"
+              step="1"
+              onChange={this.handleChange}
+            ></input>
+            <img className="social-signup-img" src="/img/world.png" />
             </div>
-            <div className="diapositive">
-            <label className="login-labels" htmlFor="contactEmail">
-              Email de contacto:
-            </label>
+
+            
+            {availabilityDisplay}
+        
+          </div>
+          <div className="diapositive">
+          <h3 className="signup-labels">Contacto</h3>
+          <div className="social-signup">
+              <img className="social-signup-img" src="/img/mail.png" />
             <input
               className="login-field"
               type="text"
@@ -355,9 +609,9 @@ export default class SignUp extends Component {
               placeholder="Email público de contacto"
               onChange={this.handleChange}
             />
-            <label className="login-labels" htmlFor="contactPhone">
-              Teléfono de contacto:
-            </label>
+            </div>
+            <div className="social-signup">
+              <img className="social-signup-img" src="/img/call-answer.png" />
             <input
               className="login-field"
               type="text"
@@ -366,9 +620,10 @@ export default class SignUp extends Component {
               placeholder="Teléfono público de contacto"
               onChange={this.handleChange}
             />
-            <label className="login-labels" htmlFor="instagram">
-              Instagram:
-            </label>
+            </div>
+            <div className="social-signup">
+              <img className="social-signup-img" src="/img/instagram.png" />
+            
             <input
               className="login-field"
               type="text"
@@ -377,9 +632,9 @@ export default class SignUp extends Component {
               placeholder="@usuario"
               onChange={this.handleChange3}
             />
-                        <label className="login-labels" htmlFor="soundcloud">
-              Soundcloud:
-            </label>
+            </div>
+            <div className="social-signup">
+              <img className="social-signup-img" src="/img/soundcloud.png" />
             <input
               className="login-field"
               type="text"
@@ -388,9 +643,9 @@ export default class SignUp extends Component {
               placeholder="Usuario soundcloud"
               onChange={this.handleChange3}
             />
-                        <label className="login-labels" htmlFor="github">
-              Github:
-            </label>
+            </div>
+            <div className="social-signup">
+              <img className="social-signup-img" src="/img/github.png" />
             <input
               className="login-field"
               type="text"
@@ -399,9 +654,9 @@ export default class SignUp extends Component {
               placeholder="Usuario github"
               onChange={this.handleChange3}
             />
-                        <label className="login-labels" htmlFor="other">
-              Página web:
-            </label>
+            </div>
+            <div className="social-signup">
+              <img className="social-signup-img" src="/img/web.png" />
             <input
               className="login-field"
               type="text"
@@ -410,16 +665,16 @@ export default class SignUp extends Component {
               placeholder="Página web/otros"
               onChange={this.handleChange3}
             />
-</div>
+            </div>
+          </div>
 
-            
-            <input
-              className="signup-button2"
-              type="submit"
-              value="Create account"
-            />
-          </form>
-        </div>
+          <input
+            className="signup-button2"
+            type="submit"
+            value="Create account"
+          />
+        </form>
+      </div>
       /* </div> */
     );
   }

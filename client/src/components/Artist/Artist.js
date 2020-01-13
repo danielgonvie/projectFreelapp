@@ -100,19 +100,19 @@ export default class Artist extends Component {
     }
 
     let availability = <React.Fragment></React.Fragment>;
-    if (this.props.artist.availability === "local") {
+    if (this.props.artist.availability === "0") {
       availability = <h5 className="artist-page-availability">
       Atiende en local
       </h5>;
-    } else if (this.props.artist.availability === "city") {
+    } else if (this.props.artist.availability === "1") {
       availability = <h5 className="artist-page-availability">
       Disponible en {this.props.artist.location.city}
       </h5>;
-    } else if (this.props.artist.availability === "100") {
+    } else if (this.props.artist.availability === "2") {
       availability = <h5 className="artist-page-availability">
       Disponibilidad en {this.props.artist.location.city} y alrededores
       </h5>;
-    } else if (this.props.artist.availability === "country") {
+    } else if (this.props.artist.availability === "3") {
       availability = <h5 className="artist-page-availability">
       Disponible en {this.props.artist.location.country}
       </h5>

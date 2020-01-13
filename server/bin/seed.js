@@ -33,7 +33,7 @@ let artists = [
     },
     category: "photo",
     subcategory: "Fotógrafa fija",
-    availability: "city",
+    availability: "0",
     contactEmail: "photopublic@gmail.com",
     contactPhone: "666555444",
     social: {
@@ -56,7 +56,7 @@ let artists = [
     },
     category: "photo",
     subcategory: "Modelo profesional de alto standing",
-    availability: "worldwide",
+    availability: "4",
     contactEmail: "modelpublic@gmail.com",
     contactPhone: "666777888",
     social: {
@@ -79,7 +79,7 @@ let artists = [
     },
     category: "photo",
     subcategory: "Videógrafo",
-    availability: "100",
+    availability: "2",
     contactEmail: "videopublic@gmail.com",
     contactPhone: "668949023",
     social: {
@@ -102,7 +102,7 @@ let artists = [
     },
     category: "tattoo",
     subcategory: "Tatuajes realistas",
-    availability: "local",
+    availability: "0",
     contactEmail: "tattoopublic@gmail.com",
     contactPhone: "654789321",
     social: {
@@ -125,7 +125,7 @@ let artists = [
     },
     category: "music",
     subcategory: "DJ techno",
-    availability: "worldwide",
+    availability: "4",
     contactEmail: "musicdjpublic@gmail.com",
     contactPhone: "693852147",
     social: {
@@ -149,7 +149,7 @@ let artists = [
     },
     category: "music",
     subcategory: "Guitarra española",
-    availability: "city",
+    availability: "1",
     contactEmail: "guitaristpublic@gmail.com",
     contactPhone: "675984123",
     social: {
@@ -173,7 +173,7 @@ let artists = [
     },
     category: "design",
     subcategory: "Fullstack web designer",
-    availability: "worldwide",
+    availability: "4",
     contactEmail: "designwebpublic@gmail.com",
     contactPhone: "682953157",
     social: {
@@ -196,7 +196,7 @@ let artists = [
     },
     category: "design",
     subcategory: "Logos para marcas",
-    availability: "worldwide",
+    availability: "4",
     contactEmail: "designlogopublic@gmail.com",
     contactPhone: "679458213",
     social: {

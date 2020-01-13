@@ -36,7 +36,7 @@ const artistSchema = new Schema(
     portfolio: { type: Schema.Types.ObjectId, ref: "Portfolio" },
     availability: {
       type: String,
-      enum: ["local", "city", "100", "contry", "worldwide"]
+      enum: ["0", "1", "2", "3", "4"]
     },
     calendar: { type: Schema.Types.ObjectId, ref: "Calendar" },
     contactEmail: { type: String },
