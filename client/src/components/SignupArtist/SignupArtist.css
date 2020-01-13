@@ -1,12 +1,12 @@
-.signup-artist-page{
+.signup-artist-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color:black;   
+  color: black;
 }
 
-.signup-box{
+.signup-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,22 +16,17 @@
   margin-top: 50px;
   width: 400px;
   height: 300px;
-  
 }
 
-
-.signup-fields{
+.signup-fields {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
-.signup-upload{
-
+.signup-upload {
 }
-
 
 .upload-btn-wrapper {
   position: relative;
@@ -51,11 +46,7 @@
   cursor: pointer;
 }
 
-
-
-
-
-.upload-btn-wrapper input[type=file] {
+.upload-btn-wrapper input[type="file"] {
   font-size: 100px;
   position: absolute;
   left: 0;
@@ -64,11 +55,14 @@
   cursor: pointer;
 }
 
-.signup-button{
+.signup-button2 {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   margin: 10px;
   margin-bottom: 30px;
   width: 150px;
-  background-color: black; 
+  background-color: black;
   border: none;
   color: white;
   padding: 5px 0px;
@@ -79,18 +73,129 @@
   font-size: 16px;
 }
 
-.signup-button:hover{
-margin: 10px;
-margin-bottom: 30px;
-width: 150px;
-background-color: white; 
-border: none;
-color: black;
-padding: 5px 0px;
-border: 1px solid black;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-cursor:pointer;
+.signup-button:hover {
+  margin: 10px;
+  margin-bottom: 30px;
+  width: 150px;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 5px 0px;
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.diapositive {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-fields2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100vw;
+}
+
+.signup-button2:hover {
+  margin: 10px;
+  margin-bottom: 30px;
+  width: 150px;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 5px 0px;
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.category-container{
+  display:flex;
+  justify-content: space-between;
+}
+.category-unit {
+  position: relative;
+  
+  
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
+.category-unit2 {
+  position: relative;
+  
+  
+  background-color: rgba(229, 226, 226, 0.74);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  z-index: -1;
+  transition: 0.20s ease-in;
+}
+
+.diapositive-category{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+.toggleAlias-selected{
+  display: flex;
+  flex-direction:column;
+}
+
+.logo-img2 {
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  left:3px;
+  z-index: -1;
+}
+
+.logo-img3 {
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  left: 0px;
+  z-index: -1;
+}
+
+.selected-category:focus {
+  outline: none;
+}
+
+
+.selected-category {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  left: 0px;
+  z-index: 1;
+  
+  
+}
+.selected-category::-webkit-color-swatch {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  z-index: 1;
+}
+.selected-category::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  z-index: 1;
 }

@@ -16,11 +16,16 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  z-index: -2;
 }
 
 
 code {
   font-family: 'Raleway', sans-serif;
+}
+
+#root{
+  z-index: -2;
 }
 
 h5{
