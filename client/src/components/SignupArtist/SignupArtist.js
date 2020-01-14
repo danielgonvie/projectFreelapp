@@ -505,31 +505,34 @@ export default class SignUp extends Component {
             </label>
             <div className="toggleAlias-selected">
             
-              <div>
+              <div className="containerToggle">
                 <input
                   type="radio"
                   name="toggleAlias"
                   value="name"
                   onChange={this.handleChange}
                 />
+                <span class="checkmark"></span>
                 {showName}
               </div>
-              <div>
+              <div className="containerToggle">
                 <input
                   type="radio"
                   name="toggleAlias"
                   value="alias"
                   onChange={this.handleChange}
                 />
+                <span class="checkmark"></span>
                 {showAlias}
               </div>
-              <div>
+              <div className="containerToggle">
                 <input
                   type="radio"
                   name="toggleAlias"
                   value="both"
                   onChange={this.handleChange}
                 />
+                <span class="checkmark"></span>
                 {showName}, {showAlias}
               </div>
             </div>
@@ -545,7 +548,7 @@ export default class SignUp extends Component {
             <h3 className="signup-labels">Subcategoría</h3>
             </label>
             <input
-              className="login-field"
+              className="login-field2"
               type="text"
               value={subcategory}
               name="subcategory"
@@ -671,7 +674,7 @@ export default class SignUp extends Component {
           <input
             className="signup-button2"
             type="submit"
-            value="Create account"
+            value="Crear cuenta"
           />
         </form>
       </div>

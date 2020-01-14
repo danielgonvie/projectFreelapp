@@ -22,7 +22,7 @@
 .login-fields{
     display: flex;
     flex-direction: column;
-
+    width: 90%
 }
 
 .login-labels{

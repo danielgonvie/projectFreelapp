@@ -8,8 +8,7 @@ const artistSchema = new Schema(
     password: { type: String, required: true, minlength: 3 },
     picture: {
       type: String,
-      default:
-        "https://vignette.wikia.nocookie.net/dogeshibe/images/3/36/FB_IMG_1509393840683.jpg/revision/latest?cb=20180520065331"
+      default: "https://www.ibts.org/wp-content/uploads/2017/08/iStock-476085198.jpg"
     },
     name: { type: String, required: true },
     alias: { type: String },

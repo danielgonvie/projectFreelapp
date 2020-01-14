@@ -247,11 +247,11 @@ router.post('/logout', (req, res, next) => {
   res.status(200).json({ message: 'Log out success!' });
 });
 
-router.get('/logout', (req, res, next) => {
+/* router.get('/logout', (req, res, next) => {
   // req.logout() is defined by passport
   req.logout();
   res.status(200).json({ message: 'Log out success!' });
-});
+}); */
 
 
 router.get('/loggedin', (req, res, next) => {

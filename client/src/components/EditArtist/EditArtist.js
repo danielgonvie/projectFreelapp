@@ -270,16 +270,16 @@ export default class Artist extends Component {
 
             <div className="parameter">
               <label>Disponibilidad: </label>
-              <select name="availability">
-                <option value="local">Local</option>
-                <option value="city">Ciudad</option>
-                <option value="100" selected>
+              <select value={this.state.availability} onChange={e => this.handleChangeDesc(e)} name="availability">
+                <option value="0">Local</option>
+                <option value="1">Ciudad</option>
+                <option value="2" >
                   Alrededores
                 </option>
-                <option value="country" selected>
+                <option value="3" >
                   Pais
                 </option>
-                <option value="worldwide" selected>
+                <option value="4" >
                   Internacional
                 </option>
               </select>

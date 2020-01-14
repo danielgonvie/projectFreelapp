@@ -8,8 +8,7 @@ const userSchema = new Schema(
     password: { type: String, required: true, minlength: 3 },
     picture: {
       type: String,
-      default:
-        "https://www.stickpng.com/assets/images/5845e770fb0b0755fa99d7f4.png"
+      default: "https://www.ibts.org/wp-content/uploads/2017/08/iStock-476085198.jpg"
     },
     name: { type: String },
     topArtists: [{ type: Schema.Types.ObjectId, ref: "Artist" }]
